@@ -18,14 +18,13 @@
 	if (self = [super init]) {
 		fileHandler = [[FileHandler alloc] init];
 	}
-	
 	return self;
 }
 
 + (void)initialize
 {
 	// Register application defaults
-	[[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"PreferenceDefaults" ofType:@"plist"]]];
+	[[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"PreferencesDefaults" ofType:@"plist"]]];
 }
 
 - (IBAction)openPreferencesWindow:(id)sender

@@ -21,7 +21,7 @@
 		04D04000110F6DB1005DA3B0 /* SubtitlesConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D03FFF110F6DB1005DA3B0 /* SubtitlesConverter.m */; };
 		04E42F180FB76CD5008200F6 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E42F170FB76CD5008200F6 /* libicucore.dylib */; };
 		04F72E38126F68BC007C0205 /* AppPreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F72E37126F68BC007C0205 /* AppPreferencesController.m */; };
-		04F72EF8126F759D007C0205 /* PreferenceDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04F72EF7126F759D007C0205 /* PreferenceDefaults.plist */; };
+		04F72EF8126F759D007C0205 /* PreferencesDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04F72EF7126F759D007C0205 /* PreferencesDefaults.plist */; };
 		04F931600FB8579E003FFCB3 /* FrameRateCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F9315F0FB8579E003FFCB3 /* FrameRateCalculator.m */; };
 		04F931640FB85825003FFCB3 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F931630FB85825003FFCB3 /* QTKit.framework */; };
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
@@ -54,7 +54,7 @@
 		04D03FFF110F6DB1005DA3B0 /* SubtitlesConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubtitlesConverter.m; sourceTree = "<group>"; };
 		04E42F170FB76CD5008200F6 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		04F72E37126F68BC007C0205 /* AppPreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppPreferencesController.m; sourceTree = "<group>"; };
-		04F72EF7126F759D007C0205 /* PreferenceDefaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PreferenceDefaults.plist; sourceTree = "<group>"; };
+		04F72EF7126F759D007C0205 /* PreferencesDefaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PreferencesDefaults.plist; sourceTree = "<group>"; };
 		04F9315E0FB8579E003FFCB3 /* FrameRateCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrameRateCalculator.h; sourceTree = "<group>"; };
 		04F9315F0FB8579E003FFCB3 /* FrameRateCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FrameRateCalculator.m; sourceTree = "<group>"; };
 		04F931630FB85825003FFCB3 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = System/Library/Frameworks/QTKit.framework; sourceTree = SDKROOT; };
@@ -194,7 +194,7 @@
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
 				04A7F9C011216EF4001DAEE8 /* Preferences.xib */,
-				04F72EF7126F759D007C0205 /* PreferenceDefaults.plist */,
+				04F72EF7126F759D007C0205 /* PreferencesDefaults.plist */,
 				04AF5FE11152EB47007C3E59 /* TODO */,
 			);
 			name = Resources;
@@ -261,7 +261,7 @@
 				04A7F9C111216EF4001DAEE8 /* Preferences.xib in Resources */,
 				04A7F8891120B8AD001DAEE8 /* General.png in Resources */,
 				04A7F9E011217A02001DAEE8 /* Napiprojekt.png in Resources */,
-				04F72EF8126F759D007C0205 /* PreferenceDefaults.plist in Resources */,
+				04F72EF8126F759D007C0205 /* PreferencesDefaults.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

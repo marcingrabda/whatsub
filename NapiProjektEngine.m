@@ -16,15 +16,14 @@
 	NSString* hash = [self md5ForFileInPath:moviePath limitedTo10MB:YES];
 	NSString* token = [self npFDigest:hash];
 	
+	/* TODO move to configuration file... */
 	NSString* urlFormatString = 
 		@"http://napiprojekt.pl/unit_napisy/dl.php?l=%@&f=%@&t=%@&v=other&kolejka=false&nick=%@&pass=%@";
 	
 	NSUserDefaults* settings = [NSUserDefaults standardUserDefaults];
-	NSString* language = [settings valueForKey:@"NPLanguage"];
-	int languageInt = [[settings objectForKey:@"NPLanguage"] integerValue];
 	
-	NSLog(@"%d %@", languageInt, language);
-	
+	//TODO add language tag to language code conversion
+	NSString* language = ...
 	NSString* nickname = [settings valueForKey:@"NPUsername"];
 	NSString* password = [settings valueForKey:@"NPPassword"];
 	
