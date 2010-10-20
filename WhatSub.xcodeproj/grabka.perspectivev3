@@ -333,7 +333,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>042A271E126F8E5900400CE6</string>
+										<string>042A2729126F8FA400400CE6</string>
 										<key>history</key>
 										<array>
 											<string>04AF2D24111F1E8E00EF0D5C</string>
@@ -367,7 +367,7 @@
 											<string>042A2673126F866300400CE6</string>
 											<string>042A2674126F866300400CE6</string>
 											<string>042A2675126F866300400CE6</string>
-											<string>042A271C126F8E5300400CE6</string>
+											<string>042A271F126F8F8800400CE6</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -490,11 +490,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>042A2711126F8E2A00400CE6</string>
+				<string>042A272A126F8FA400400CE6</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>042A2712126F8E2A00400CE6</string>
+				<string>042A272B126F8FA400400CE6</string>
 				<string>046545F50FB38B1200D9E8FA</string>
-				<string>042A2713126F8E2A00400CE6</string>
+				<string>042A272C126F8FA400400CE6</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -684,8 +684,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>042A271A126F8E2A00400CE6</string>
-		<string>042A271B126F8E2A00400CE6</string>
 		<string>/Users/grabka/Developer/Xcode/WhatSub/WhatSub.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
