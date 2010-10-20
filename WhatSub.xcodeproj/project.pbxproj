@@ -12,7 +12,6 @@
 		0465473D0FB4319100D9E8FA /* DropFileView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0465473C0FB4319100D9E8FA /* DropFileView.m */; };
 		0471C884124AB368001A567D /* FileHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 0471C883124AB368001A567D /* FileHandler.m */; };
 		04A7F79C1120AFCF001DAEE8 /* DBPrefsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A7F79B1120AFCF001DAEE8 /* DBPrefsWindowController.m */; };
-		04A7F79F1120B00D001DAEE8 /* AppPreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A7F79E1120B00D001DAEE8 /* AppPreferencesController.m */; };
 		04A7F8891120B8AD001DAEE8 /* General.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A7F8881120B8AD001DAEE8 /* General.png */; };
 		04A7F9C111216EF4001DAEE8 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A7F9C011216EF4001DAEE8 /* Preferences.xib */; };
 		04A7F9E011217A02001DAEE8 /* Napiprojekt.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A7F9DF11217A02001DAEE8 /* Napiprojekt.png */; };
@@ -21,6 +20,8 @@
 		04C34C8111123FEB0080BDEB /* NapiProjektEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C34C8011123FEB0080BDEB /* NapiProjektEngine.m */; };
 		04D04000110F6DB1005DA3B0 /* SubtitlesConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D03FFF110F6DB1005DA3B0 /* SubtitlesConverter.m */; };
 		04E42F180FB76CD5008200F6 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E42F170FB76CD5008200F6 /* libicucore.dylib */; };
+		04F72E38126F68BC007C0205 /* AppPreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F72E37126F68BC007C0205 /* AppPreferencesController.m */; };
+		04F72EF8126F759D007C0205 /* PreferenceDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04F72EF7126F759D007C0205 /* PreferenceDefaults.plist */; };
 		04F931600FB8579E003FFCB3 /* FrameRateCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F9315F0FB8579E003FFCB3 /* FrameRateCalculator.m */; };
 		04F931640FB85825003FFCB3 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F931630FB85825003FFCB3 /* QTKit.framework */; };
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
@@ -40,7 +41,6 @@
 		04A7F79A1120AFCF001DAEE8 /* DBPrefsWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBPrefsWindowController.h; sourceTree = "<group>"; };
 		04A7F79B1120AFCF001DAEE8 /* DBPrefsWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBPrefsWindowController.m; sourceTree = "<group>"; };
 		04A7F79D1120B00D001DAEE8 /* AppPreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppPreferencesController.h; sourceTree = "<group>"; };
-		04A7F79E1120B00D001DAEE8 /* AppPreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppPreferencesController.m; sourceTree = "<group>"; };
 		04A7F8791120B7F6001DAEE8 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/Preferences.xib; sourceTree = "<group>"; };
 		04A7F8881120B8AD001DAEE8 /* General.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = General.png; sourceTree = "<group>"; };
 		04A7F9DF11217A02001DAEE8 /* Napiprojekt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Napiprojekt.png; sourceTree = "<group>"; };
@@ -53,6 +53,8 @@
 		04D03FFE110F6DB1005DA3B0 /* SubtitlesConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubtitlesConverter.h; sourceTree = "<group>"; };
 		04D03FFF110F6DB1005DA3B0 /* SubtitlesConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubtitlesConverter.m; sourceTree = "<group>"; };
 		04E42F170FB76CD5008200F6 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		04F72E37126F68BC007C0205 /* AppPreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppPreferencesController.m; sourceTree = "<group>"; };
+		04F72EF7126F759D007C0205 /* PreferenceDefaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PreferenceDefaults.plist; sourceTree = "<group>"; };
 		04F9315E0FB8579E003FFCB3 /* FrameRateCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrameRateCalculator.h; sourceTree = "<group>"; };
 		04F9315F0FB8579E003FFCB3 /* FrameRateCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FrameRateCalculator.m; sourceTree = "<group>"; };
 		04F931630FB85825003FFCB3 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = System/Library/Frameworks/QTKit.framework; sourceTree = SDKROOT; };
@@ -83,17 +85,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		080E96DDFE201D6D7F000001 /* Classes */ = {
+		04F72BEA126F0E84007C0205 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0465473B0FB4319100D9E8FA /* DropFileView.h */,
+				0465473C0FB4319100D9E8FA /* DropFileView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		04F72C10126F0EC1007C0205 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				04115B370FB6F6C9005E5F74 /* AppController.h */,
 				04115B380FB6F6C9005E5F74 /* AppController.m */,
 				04A7F79D1120B00D001DAEE8 /* AppPreferencesController.h */,
-				04A7F79E1120B00D001DAEE8 /* AppPreferencesController.m */,
-				0465473B0FB4319100D9E8FA /* DropFileView.h */,
-				0465473C0FB4319100D9E8FA /* DropFileView.m */,
+				04F72E37126F68BC007C0205 /* AppPreferencesController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		04F72CBB126F1B9D007C0205 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
 				04F9315E0FB8579E003FFCB3 /* FrameRateCalculator.h */,
 				04F9315F0FB8579E003FFCB3 /* FrameRateCalculator.m */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				04F72C10126F0EC1007C0205 /* Controller */,
+				04F72BEA126F0E84007C0205 /* View */,
+				04F72CBB126F1B9D007C0205 /* Helper */,
 				04D03FFE110F6DB1005DA3B0 /* SubtitlesConverter.h */,
 				04D03FFF110F6DB1005DA3B0 /* SubtitlesConverter.m */,
 				04C34C7F11123FEB0080BDEB /* NapiProjektEngine.h */,
@@ -168,6 +194,7 @@
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
 				04A7F9C011216EF4001DAEE8 /* Preferences.xib */,
+				04F72EF7126F759D007C0205 /* PreferenceDefaults.plist */,
 				04AF5FE11152EB47007C3E59 /* TODO */,
 			);
 			name = Resources;
@@ -234,6 +261,7 @@
 				04A7F9C111216EF4001DAEE8 /* Preferences.xib in Resources */,
 				04A7F8891120B8AD001DAEE8 /* General.png in Resources */,
 				04A7F9E011217A02001DAEE8 /* Napiprojekt.png in Resources */,
+				04F72EF8126F759D007C0205 /* PreferenceDefaults.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,8 +280,8 @@
 				04C34A691110C8930080BDEB /* RegexKitLite.m in Sources */,
 				04C34C8111123FEB0080BDEB /* NapiProjektEngine.m in Sources */,
 				04A7F79C1120AFCF001DAEE8 /* DBPrefsWindowController.m in Sources */,
-				04A7F79F1120B00D001DAEE8 /* AppPreferencesController.m in Sources */,
 				0471C884124AB368001A567D /* FileHandler.m in Sources */,
+				04F72E38126F68BC007C0205 /* AppPreferencesController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

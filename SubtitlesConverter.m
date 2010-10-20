@@ -56,4 +56,9 @@
 	*/
 }
 
+- (void)encodings
+{
+	
+}
+
 @end

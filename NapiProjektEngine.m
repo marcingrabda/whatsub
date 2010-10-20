@@ -11,8 +11,6 @@
 
 @implementation NapiProjektEngine
 
-@synthesize nick, pass, lang;
-
 - (NSData*)retrieveSubtitlesForMovieInPath:(NSString*)moviePath hash:(NSString**)hashPtr
 {
 	NSString* hash = [self md5ForFileInPath:moviePath limitedTo10MB:YES];
@@ -20,9 +18,19 @@
 	
 	NSString* urlFormatString = 
 		@"http://napiprojekt.pl/unit_napisy/dl.php?l=%@&f=%@&t=%@&v=other&kolejka=false&nick=%@&pass=%@";
-	NSString* urlString = [NSString stringWithFormat:urlFormatString, self.lang, hash, token, self.nick, self.pass];
 	
-	NSError* error;
+	NSUserDefaults* settings = [NSUserDefaults standardUserDefaults];
+	NSString* language = [settings valueForKey:@"NPLanguage"];
+	int languageInt = [[settings objectForKey:@"NPLanguage"] integerValue];
+	
+	NSLog(@"%d %@", languageInt, language);
+	
+	NSString* nickname = [settings valueForKey:@"NPUsername"];
+	NSString* password = [settings valueForKey:@"NPPassword"];
+	
+	NSString* urlString = [NSString stringWithFormat:urlFormatString, language, hash, token, nickname, password];
+	
+	NSError* error = nil;
 	NSURL* url = [NSURL URLWithString:urlString];
 	NSData* contents = [NSData dataWithContentsOfURL:url options:0 error:&error];
 	

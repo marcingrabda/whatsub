@@ -16,15 +16,7 @@
 {	
 	if (self = [super init]) {
 		converter = [[SubtitlesConverter alloc] init];
-		
-		// do parameters initialization (perhaps we should move it to initialize method)
-		//[converter initialize];
-		
 		engine = [[NapiProjektEngine alloc] init];
-		
-		engine.lang = @"PL";
-		engine.nick = @"grabka";
-		engine.pass = @"alice";
 	}
 	
 	return self;

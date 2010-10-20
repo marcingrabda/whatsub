@@ -1,5 +1,5 @@
+0. Move url (and others) to configuration file...
 1. Connect preferences with source code and persistent storage
 2. Add source file character encoding recognition
 3. Two conversion paths - txt->srt (when allowed) OR movie (avi, mkv, ...?) to txt/srt
-4. Fix window starting position
-5. Clicking on dock should reopen main window
+4. Clicking on dock should reopen main window

@@ -22,6 +22,12 @@
 	return self;
 }
 
++ (void)initialize
+{
+	// Register application defaults
+	[[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"PreferenceDefaults" ofType:@"plist"]]];
+}
+
 - (IBAction)openPreferencesWindow:(id)sender
 {
 	[[AppPreferencesController sharedPrefsWindowController] showWindow:nil];
