@@ -24,7 +24,11 @@
 + (void)initialize
 {
 	// Register application defaults
-	[[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"PreferencesDefaults" ofType:@"plist"]]];
+	NSBundle* mainBundle = [NSBundle mainBundle];
+	NSString* defaultsFile = [mainBundle pathForResource:@"PreferencesDefaults" ofType:@"plist"];
+	NSDictionary* defaults = [NSDictionary dictionaryWithContentsOfFile:defaultsFile];
+	NSUserDefaults* standardUserDefaults = [NSUserDefaults standardUserDefaults];
+	[standardUserDefaults registerDefaults:defaults];
 }
 
 - (IBAction)openPreferencesWindow:(id)sender
@@ -32,7 +36,7 @@
 	[[AppPreferencesController sharedPrefsWindowController] showWindow:nil];
 }
 
-/* handle a drop on the dock */
+/* handle files dropped on the dock */
 - (void)application:(NSApplication *)sender openFiles:(NSArray*)files
 {	
 	[fileHandler startProcessingFiles:files];
@@ -41,13 +45,14 @@
 /* handle files dropped on the view area */
 - (void)filesDragged:(DropFileView*)sender
 {	
-	[fileHandler startProcessingFiles:[sender filenames]];
+	NSArray* files = [sender filenames];
+	[fileHandler startProcessingFiles:files];
 }
 
 /* handle files opened via the menu item */
 - (IBAction)openFile:(id)sender
 {	
-	NSArray* fileTypes = [NSArray arrayWithObjects:@"txt", @"avi", nil];
+	NSArray* allowedFileTypes = [NSArray arrayWithObjects:@"txt", @"avi", nil];
 	NSOpenPanel* openPanel = [NSOpenPanel openPanel];
 	
 	[openPanel setCanChooseFiles:YES];
@@ -56,7 +61,7 @@
 	[openPanel setAllowsMultipleSelection:YES];
 	[openPanel setTitle:@"Select a file to open..."];
 	
-	if ([openPanel runModalForDirectory:nil file:nil types:fileTypes] == NSOKButton)
+	if ([openPanel runModalForDirectory:nil file:nil types:allowedFileTypes] == NSOKButton)
 	{
 		NSArray* files = [openPanel filenames];
 		[fileHandler startProcessingFiles:files];

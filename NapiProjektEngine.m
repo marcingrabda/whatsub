@@ -22,12 +22,12 @@
 	
 	NSUserDefaults* settings = [NSUserDefaults standardUserDefaults];
 	
-	//TODO add language tag to language code conversion
-	NSString* language = ...
+	NSString* language = [settings valueForKey:@"NPLanguage"];
 	NSString* nickname = [settings valueForKey:@"NPUsername"];
 	NSString* password = [settings valueForKey:@"NPPassword"];
 	
 	NSString* urlString = [NSString stringWithFormat:urlFormatString, language, hash, token, nickname, password];
+	NSLog(@"urlString: %@", urlString);
 	
 	NSError* error = nil;
 	NSURL* url = [NSURL URLWithString:urlString];
