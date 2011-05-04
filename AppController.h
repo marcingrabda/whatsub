@@ -12,9 +12,13 @@
 @class FileHandler;
 
 @interface AppController : NSObject {
-	FileHandler* fileHandler;
+    IBOutlet NSWindow* mainWindow;
+	IBOutlet FileHandler* fileHandler;
 }
 
+@property (readonly) NSWindow* mainWindow;
+
++ (AppController*)instance;
 - (IBAction)openPreferencesWindow:(id)sender;
 - (void)filesDragged:(DropFileView*)sender;
 - (IBAction)openFile:(id)sender;

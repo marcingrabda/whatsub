@@ -48,7 +48,6 @@
 		04A7F8881120B8AD001DAEE8 /* General.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = General.png; sourceTree = "<group>"; };
 		04A7F9DF11217A02001DAEE8 /* Napiprojekt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Napiprojekt.png; sourceTree = "<group>"; };
 		04AF2E90111F6C1000EF0D5C /* 7za */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = 7za; sourceTree = "<group>"; };
-		04AF5FE11152EB47007C3E59 /* TODO */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO; sourceTree = "<group>"; };
 		04AFD19313702BBB00AFE116 /* SubtitlesDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubtitlesDownloader.h; sourceTree = "<group>"; };
 		04AFD19413702BBB00AFE116 /* SubtitlesDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubtitlesDownloader.m; sourceTree = "<group>"; };
 		04C34A671110C8930080BDEB /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
@@ -208,7 +207,6 @@
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
 				04A7F9C011216EF4001DAEE8 /* Preferences.xib */,
 				04F72EF7126F759D007C0205 /* PreferencesDefaults.plist */,
-				04AF5FE11152EB47007C3E59 /* TODO */,
 			);
 			name = Resources;
 			sourceTree = "<group>";

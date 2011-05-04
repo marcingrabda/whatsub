@@ -10,10 +10,13 @@
 
 @class SubtitlesConverter;
 @class SubtitlesDownloader;
+@class AppController;
 
 @interface FileHandler : NSObject {
 	SubtitlesConverter* converter;
 	SubtitlesDownloader* downloader;
+    IBOutlet NSWindow* loadingWindow;
+    IBOutlet NSProgressIndicator* progressIndicator;
 }
 
 - (void)startProcessingFiles:(NSArray*)files;

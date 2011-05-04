@@ -13,11 +13,14 @@
 
 @implementation AppController
 
+@synthesize mainWindow;
+
+static AppController* instance = nil;
+
 - (id)init
 {	
-	if (self = [super init]) {
-		fileHandler = [[FileHandler alloc] init];
-	}
+	[super init];
+    instance = self;
 	return self;
 }
 
@@ -29,6 +32,11 @@
 	NSDictionary* defaults = [NSDictionary dictionaryWithContentsOfFile:defaultsFile];
 	NSUserDefaults* standardUserDefaults = [NSUserDefaults standardUserDefaults];
 	[standardUserDefaults registerDefaults:defaults];
+}
+
++ (AppController*)instance
+{
+	return instance;
 }
 
 - (IBAction)openPreferencesWindow:(id)sender

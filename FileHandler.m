@@ -9,17 +9,18 @@
 #import "FileHandler.h"
 #import "SubtitlesConverter.h"
 #import "SubtitlesDownloader.h"
+#import "AppController.h"
 
 @implementation FileHandler
 
 - (id)init
 {	
-	if (self = [super init]) {
-		converter = [[SubtitlesConverter alloc] init];
-		downloader = [[SubtitlesDownloader alloc] init];
-	}
+	[super init];
+    
+    converter = [[SubtitlesConverter alloc] init];
+	downloader = [[SubtitlesDownloader alloc] init];	
 	
-	return self;
+    return self;
 }
 
 - (void)startProcessingFiles:(NSArray*)files
@@ -31,10 +32,18 @@
 
 - (void)processFile:(NSString*)pathToFile
 {
-	//based on the file type convert or download
+    [progressIndicator startAnimation:self];
+    NSWindow* mainWindow = [[AppController instance] mainWindow];
+    [NSApp beginSheet:loadingWindow modalForWindow:mainWindow modalDelegate:nil didEndSelector:nil contextInfo:nil];
+    
+    //based on the file type convert or download
 	//[converter convert:pathToFile]; or ...
-	
+    
 	[downloader download:pathToFile];
+    
+    [progressIndicator stopAnimation:self];
+    [NSApp endSheet:loadingWindow];
+    [loadingWindow orderOut:self];
 }
 
 @end

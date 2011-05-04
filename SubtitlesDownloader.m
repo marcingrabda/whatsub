@@ -13,9 +13,9 @@
 
 - (id)init
 {	
-	if (self = [super init]) {
-		engine = [[NapiProjektEngine alloc] init];
-	}
+	[super init];
+	
+    engine = [[NapiProjektEngine alloc] init];
 	
 	return self;
 }
