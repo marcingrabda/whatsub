@@ -9,11 +9,11 @@
 #import <Cocoa/Cocoa.h>
 
 @class SubtitlesConverter;
-@class NapiProjektEngine;
+@class SubtitlesDownloader;
 
 @interface FileHandler : NSObject {
 	SubtitlesConverter* converter;
-	NapiProjektEngine* engine;
+	SubtitlesDownloader* downloader;
 }
 
 - (void)startProcessingFiles:(NSArray*)files;

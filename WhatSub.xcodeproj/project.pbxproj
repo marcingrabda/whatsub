@@ -8,22 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		04115B390FB6F6C9005E5F74 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04115B380FB6F6C9005E5F74 /* AppController.m */; };
-		0415E82A11124AA600E26BB8 /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0415E82911124AA600E26BB8 /* libcrypto.dylib */; };
 		0465473D0FB4319100D9E8FA /* DropFileView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0465473C0FB4319100D9E8FA /* DropFileView.m */; };
 		0471C884124AB368001A567D /* FileHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 0471C883124AB368001A567D /* FileHandler.m */; };
+		0481167C1370B85C00A775F8 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0481167B1370B85C00A775F8 /* libicucore.dylib */; };
+		0481167E1370B86400A775F8 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0481167D1370B86400A775F8 /* QTKit.framework */; };
+		048116801370B86C00A775F8 /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0481167F1370B86C00A775F8 /* libcrypto.dylib */; };
 		04A7F79C1120AFCF001DAEE8 /* DBPrefsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A7F79B1120AFCF001DAEE8 /* DBPrefsWindowController.m */; };
 		04A7F8891120B8AD001DAEE8 /* General.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A7F8881120B8AD001DAEE8 /* General.png */; };
 		04A7F9C111216EF4001DAEE8 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A7F9C011216EF4001DAEE8 /* Preferences.xib */; };
 		04A7F9E011217A02001DAEE8 /* Napiprojekt.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A7F9DF11217A02001DAEE8 /* Napiprojekt.png */; };
 		04AF2E91111F6C1000EF0D5C /* 7za in Resources */ = {isa = PBXBuildFile; fileRef = 04AF2E90111F6C1000EF0D5C /* 7za */; };
+		04AFD19513702BBB00AFE116 /* SubtitlesDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AFD19413702BBB00AFE116 /* SubtitlesDownloader.m */; };
 		04C34A691110C8930080BDEB /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C34A681110C8930080BDEB /* RegexKitLite.m */; };
 		04C34C8111123FEB0080BDEB /* NapiProjektEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C34C8011123FEB0080BDEB /* NapiProjektEngine.m */; };
 		04D04000110F6DB1005DA3B0 /* SubtitlesConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D03FFF110F6DB1005DA3B0 /* SubtitlesConverter.m */; };
-		04E42F180FB76CD5008200F6 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E42F170FB76CD5008200F6 /* libicucore.dylib */; };
 		04F72E38126F68BC007C0205 /* AppPreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F72E37126F68BC007C0205 /* AppPreferencesController.m */; };
 		04F72EF8126F759D007C0205 /* PreferencesDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04F72EF7126F759D007C0205 /* PreferencesDefaults.plist */; };
 		04F931600FB8579E003FFCB3 /* FrameRateCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F9315F0FB8579E003FFCB3 /* FrameRateCalculator.m */; };
-		04F931640FB85825003FFCB3 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F931630FB85825003FFCB3 /* QTKit.framework */; };
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
@@ -33,11 +34,13 @@
 /* Begin PBXFileReference section */
 		04115B370FB6F6C9005E5F74 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
 		04115B380FB6F6C9005E5F74 /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
-		0415E82911124AA600E26BB8 /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = usr/lib/libcrypto.dylib; sourceTree = SDKROOT; };
 		0465473B0FB4319100D9E8FA /* DropFileView.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; path = DropFileView.h; sourceTree = "<group>"; };
 		0465473C0FB4319100D9E8FA /* DropFileView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropFileView.m; sourceTree = "<group>"; };
 		0471C882124AB368001A567D /* FileHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileHandler.h; sourceTree = "<group>"; };
 		0471C883124AB368001A567D /* FileHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileHandler.m; sourceTree = "<group>"; };
+		0481167B1370B85C00A775F8 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = /usr/lib/libicucore.dylib; sourceTree = "<absolute>"; };
+		0481167D1370B86400A775F8 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
+		0481167F1370B86C00A775F8 /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = /usr/lib/libcrypto.dylib; sourceTree = "<absolute>"; };
 		04A7F79A1120AFCF001DAEE8 /* DBPrefsWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBPrefsWindowController.h; sourceTree = "<group>"; };
 		04A7F79B1120AFCF001DAEE8 /* DBPrefsWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBPrefsWindowController.m; sourceTree = "<group>"; };
 		04A7F79D1120B00D001DAEE8 /* AppPreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppPreferencesController.h; sourceTree = "<group>"; };
@@ -46,18 +49,18 @@
 		04A7F9DF11217A02001DAEE8 /* Napiprojekt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Napiprojekt.png; sourceTree = "<group>"; };
 		04AF2E90111F6C1000EF0D5C /* 7za */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = 7za; sourceTree = "<group>"; };
 		04AF5FE11152EB47007C3E59 /* TODO */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO; sourceTree = "<group>"; };
+		04AFD19313702BBB00AFE116 /* SubtitlesDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubtitlesDownloader.h; sourceTree = "<group>"; };
+		04AFD19413702BBB00AFE116 /* SubtitlesDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubtitlesDownloader.m; sourceTree = "<group>"; };
 		04C34A671110C8930080BDEB /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
 		04C34A681110C8930080BDEB /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
 		04C34C7F11123FEB0080BDEB /* NapiProjektEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NapiProjektEngine.h; sourceTree = "<group>"; };
 		04C34C8011123FEB0080BDEB /* NapiProjektEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NapiProjektEngine.m; sourceTree = "<group>"; };
 		04D03FFE110F6DB1005DA3B0 /* SubtitlesConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubtitlesConverter.h; sourceTree = "<group>"; };
 		04D03FFF110F6DB1005DA3B0 /* SubtitlesConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubtitlesConverter.m; sourceTree = "<group>"; };
-		04E42F170FB76CD5008200F6 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		04F72E37126F68BC007C0205 /* AppPreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppPreferencesController.m; sourceTree = "<group>"; };
 		04F72EF7126F759D007C0205 /* PreferencesDefaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PreferencesDefaults.plist; sourceTree = "<group>"; };
 		04F9315E0FB8579E003FFCB3 /* FrameRateCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrameRateCalculator.h; sourceTree = "<group>"; };
 		04F9315F0FB8579E003FFCB3 /* FrameRateCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FrameRateCalculator.m; sourceTree = "<group>"; };
-		04F931630FB85825003FFCB3 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = System/Library/Frameworks/QTKit.framework; sourceTree = SDKROOT; };
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
@@ -75,16 +78,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				048116801370B86C00A775F8 /* libcrypto.dylib in Frameworks */,
+				0481167C1370B85C00A775F8 /* libicucore.dylib in Frameworks */,
+				0481167E1370B86400A775F8 /* QTKit.framework in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
-				04E42F180FB76CD5008200F6 /* libicucore.dylib in Frameworks */,
-				04F931640FB85825003FFCB3 /* QTKit.framework in Frameworks */,
-				0415E82A11124AA600E26BB8 /* libcrypto.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04AFD19813702C7D00AFE116 /* Subtitles */ = {
+			isa = PBXGroup;
+			children = (
+				04D03FFE110F6DB1005DA3B0 /* SubtitlesConverter.h */,
+				04D03FFF110F6DB1005DA3B0 /* SubtitlesConverter.m */,
+				04C34C7F11123FEB0080BDEB /* NapiProjektEngine.h */,
+				04C34C8011123FEB0080BDEB /* NapiProjektEngine.m */,
+				04AFD19313702BBB00AFE116 /* SubtitlesDownloader.h */,
+				04AFD19413702BBB00AFE116 /* SubtitlesDownloader.m */,
+			);
+			name = Subtitles;
+			sourceTree = "<group>";
+		};
 		04F72BEA126F0E84007C0205 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,10 +136,7 @@
 				04F72C10126F0EC1007C0205 /* Controller */,
 				04F72BEA126F0E84007C0205 /* View */,
 				04F72CBB126F1B9D007C0205 /* Helper */,
-				04D03FFE110F6DB1005DA3B0 /* SubtitlesConverter.h */,
-				04D03FFF110F6DB1005DA3B0 /* SubtitlesConverter.m */,
-				04C34C7F11123FEB0080BDEB /* NapiProjektEngine.h */,
-				04C34C8011123FEB0080BDEB /* NapiProjektEngine.m */,
+				04AFD19813702C7D00AFE116 /* Subtitles */,
 				0471C882124AB368001A567D /* FileHandler.h */,
 				0471C883124AB368001A567D /* FileHandler.m */,
 			);
@@ -134,9 +147,9 @@
 			isa = PBXGroup;
 			children = (
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
-				04F931630FB85825003FFCB3 /* QTKit.framework */,
-				04E42F170FB76CD5008200F6 /* libicucore.dylib */,
-				0415E82911124AA600E26BB8 /* libcrypto.dylib */,
+				0481167D1370B86400A775F8 /* QTKit.framework */,
+				0481167F1370B86C00A775F8 /* libcrypto.dylib */,
+				0481167B1370B85C00A775F8 /* libicucore.dylib */,
 			);
 			name = "Linked Frameworks";
 			sourceTree = "<group>";
@@ -289,6 +302,7 @@
 				04A7F79C1120AFCF001DAEE8 /* DBPrefsWindowController.m in Sources */,
 				0471C884124AB368001A567D /* FileHandler.m in Sources */,
 				04F72E38126F68BC007C0205 /* AppPreferencesController.m in Sources */,
+				04AFD19513702BBB00AFE116 /* SubtitlesDownloader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,8 +352,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = WhatSub_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Applications";
+				INSTALL_PATH = /Applications;
+				MACOSX_DEPLOYMENT_TARGET = "";
 				PRODUCT_NAME = WhatSub;
+				SDKROOT = "";
 			};
 			name = Debug;
 		};
@@ -356,8 +372,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = WhatSub_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Applications";
+				INSTALL_PATH = /Applications;
+				MACOSX_DEPLOYMENT_TARGET = "";
 				PRODUCT_NAME = WhatSub;
+				SDKROOT = "";
 			};
 			name = Release;
 		};

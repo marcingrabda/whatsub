@@ -16,27 +16,46 @@
 	NSString* hash = [self md5ForFileInPath:moviePath limitedTo10MB:YES];
 	NSString* token = [self npFDigest:hash];
 	
+	NSError* error = nil;
+	NSString* urlString = [self getURLForHash:hash token:token];
+	NSURL* url = [NSURL URLWithString:urlString];
+	
+	NSLog(@"Retrieving subtitles: %@", urlString);
+	NSData* contents = [NSData dataWithContentsOfURL:url options:0 error:&error];
+	
+	[hash retain];
+	*hashPtr = hash;
+	
+	char buffer[2];
+	[contents getBytes:(char*)buffer length:sizeof(buffer)];
+	
+	NSString* magic = [[NSString alloc] initWithBytes:buffer length:sizeof(buffer) encoding:NSASCIIStringEncoding];
+	if ([magic isEqualToString:@"7z"]) {
+		return contents;
+	}	
+	
+	return nil;
+}
+
+- (NSString*)getURLForHash:(NSString*)hash token:(NSString*)token
+{
+	NSDictionary* languages = [NSDictionary dictionaryWithObjectsAndKeys:
+							   @"PL", @"0",
+							   @"EN", @"1", nil];
+	
 	/* TODO move to configuration file... */
 	NSString* urlFormatString = 
 		@"http://napiprojekt.pl/unit_napisy/dl.php?l=%@&f=%@&t=%@&v=other&kolejka=false&nick=%@&pass=%@";
 	
 	NSUserDefaults* settings = [NSUserDefaults standardUserDefaults];
 	
-	NSString* language = [settings valueForKey:@"NPLanguage"];
+	NSNumber* langKey = [settings valueForKey:@"NPLanguage"];
+	NSString* langKeyString = [langKey stringValue];
+	NSString* language = [languages objectForKey:langKeyString];
 	NSString* nickname = [settings valueForKey:@"NPUsername"];
 	NSString* password = [settings valueForKey:@"NPPassword"];
 	
-	NSString* urlString = [NSString stringWithFormat:urlFormatString, language, hash, token, nickname, password];
-	NSLog(@"urlString: %@", urlString);
-	
-	NSError* error = nil;
-	NSURL* url = [NSURL URLWithString:urlString];
-	NSData* contents = [NSData dataWithContentsOfURL:url options:0 error:&error];
-	
-	[hash retain];
-	*hashPtr = hash;
-	
-	return contents;
+	return [NSString stringWithFormat:urlFormatString, language, hash, token, nickname, password];
 }
 
 - (NSString*)npFDigest:(NSString*)input

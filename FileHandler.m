@@ -8,7 +8,7 @@
 
 #import "FileHandler.h"
 #import "SubtitlesConverter.h"
-#import "NapiProjektEngine.h"
+#import "SubtitlesDownloader.h"
 
 @implementation FileHandler
 
@@ -16,7 +16,7 @@
 {	
 	if (self = [super init]) {
 		converter = [[SubtitlesConverter alloc] init];
-		engine = [[NapiProjektEngine alloc] init];
+		downloader = [[SubtitlesDownloader alloc] init];
 	}
 	
 	return self;
@@ -31,28 +31,10 @@
 
 - (void)processFile:(NSString*)pathToFile
 {
-	//[converter convert:pathToFile];
+	//based on the file type convert or download
+	//[converter convert:pathToFile]; or ...
 	
-	NSString* hash = nil;
-	NSData* fileData = [engine retrieveSubtitlesForMovieInPath:pathToFile hash:&hash];
-	
-	NSString* temporaryDirectory = NSTemporaryDirectory();
-	NSString* p7zipFileName = [hash stringByAppendingPathExtension:@"7z"];
-	NSString* p7zipOutputFilePath = [temporaryDirectory stringByAppendingPathComponent:p7zipFileName];
-	
-	[fileData writeToFile:p7zipOutputFilePath atomically:YES];	
-	
-	NSString* p7zip = [[NSBundle mainBundle] pathForResource:@"7za" ofType:nil];
-	NSArray* args = [NSArray arrayWithObjects:@"e", @"-y", @"-piBlm8NTigvru0Jr0", p7zipFileName, nil];
-	
-	NSTask* task = [[NSTask alloc] init];
-	[task setCurrentDirectoryPath:temporaryDirectory];
-	[task setLaunchPath:p7zip];
-	[task setArguments:args];
-	[task launch];
-	[task waitUntilExit];
-	
-	NSString* subtitlesFileName = [hash stringByAppendingPathExtension:@"txt"];
+	[downloader download:pathToFile];
 }
 
 @end

@@ -12,6 +12,7 @@
 }
 
 - (NSData*)retrieveSubtitlesForMovieInPath:(NSString*)moviePath hash:(NSString**)hashPtr;
+- (NSString*)getURLForHash:(NSString*)hash token:(NSString*)token;
 - (NSString*)npFDigest:(NSString*)input;
 - (NSString*)md5ForFileInPath:(NSString*)path limitedTo10MB:(BOOL)limited;
 
