@@ -13,11 +13,12 @@
 
 - (id)init
 {	
-	[super init];
-	
-    engine = [[NapiProjektEngine alloc] init];
-	
-	return self;
+	self = [super init];
+	if (self)
+    {
+        engine = [[NapiProjektEngine alloc] init];
+    }
+    return self;
 }
 
 - (void)download:(NSString*)pathToFile

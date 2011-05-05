@@ -331,6 +331,7 @@
 							<string key="NSFrameSize">{354, 157}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSWindow"/>
+							<reference key="NSNextKeyView"/>
 							<string key="NSClassName">DropFileView</string>
 						</object>
 					</object>
@@ -346,7 +347,7 @@
 			<object class="NSWindowTemplate" id="160264217">
 				<int key="NSWindowStyleMask">15</int>
 				<int key="NSWindowBacking">2</int>
-				<string key="NSWindowRect">{{196, 240}, {339, 56}}</string>
+				<string key="NSWindowRect">{{196, 240}, {341, 68}}</string>
 				<int key="NSWTFlags">544735232</int>
 				<string key="NSWindowTitle">Loading</string>
 				<string key="NSWindowClass">NSWindow</string>
@@ -360,14 +361,15 @@
 							<reference key="NSNextResponder" ref="698075051"/>
 							<int key="NSvFlags">1292</int>
 							<object class="NSPSMatrix" key="NSDrawMatrix"/>
-							<string key="NSFrame">{{18, 16}, {303, 20}}</string>
+							<string key="NSFrame">{{19, 22}, {303, 20}}</string>
 							<reference key="NSSuperview" ref="698075051"/>
 							<reference key="NSWindow"/>
+							<reference key="NSNextKeyView"/>
 							<int key="NSpiFlags">16394</int>
 							<double key="NSMaxValue">100</double>
 						</object>
 					</object>
-					<string key="NSFrame">{{7, 11}, {339, 56}}</string>
+					<string key="NSFrame">{{7, 11}, {341, 68}}</string>
 					<reference key="NSSuperview"/>
 					<reference key="NSWindow"/>
 					<reference key="NSNextKeyView" ref="226323787"/>

@@ -26,15 +26,28 @@
 	[hash retain];
 	*hashPtr = hash;
 	
-	char buffer[2];
+	char buffer[4];
 	[contents getBytes:(char*)buffer length:sizeof(buffer)];
 	
 	NSString* magic = [[NSString alloc] initWithBytes:buffer length:sizeof(buffer) encoding:NSASCIIStringEncoding];
-	if ([magic isEqualToString:@"7z"]) {
+	if ([magic hasPrefix:@"7z"])
+    {
 		return contents;
-	}	
+	}
+    
+    NSString* reason;
+    NSString* movieFileName = [moviePath lastPathComponent];
+    if ([magic isEqualToString:@"NPc0"])
+    {
+        reason = [NSString stringWithFormat:@"Subtitles not found for movie %@", movieFileName];
+    }
+    else
+    {
+        reason = [NSString stringWithFormat:@"Subtitles for movie %@ could not be downloaded", movieFileName];
+    }
 	
-	return nil;
+    NSException* e = [NSException exceptionWithName:@"SubtitlesException" reason:reason userInfo:nil];
+    @throw e;
 }
 
 - (NSString*)getURLForHash:(NSString*)hash token:(NSString*)token

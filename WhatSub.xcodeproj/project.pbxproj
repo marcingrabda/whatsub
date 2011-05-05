@@ -22,11 +22,11 @@
 		04C34A691110C8930080BDEB /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C34A681110C8930080BDEB /* RegexKitLite.m */; };
 		04C34C8111123FEB0080BDEB /* NapiProjektEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C34C8011123FEB0080BDEB /* NapiProjektEngine.m */; };
 		04D04000110F6DB1005DA3B0 /* SubtitlesConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D03FFF110F6DB1005DA3B0 /* SubtitlesConverter.m */; };
+		04EBB4FD1371B6E500CC15DF /* BTUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBB4FC1371B6E400CC15DF /* BTUtils.m */; };
 		04F72E38126F68BC007C0205 /* AppPreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F72E37126F68BC007C0205 /* AppPreferencesController.m */; };
-		04F72EF8126F759D007C0205 /* PreferencesDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04F72EF7126F759D007C0205 /* PreferencesDefaults.plist */; };
+		04F72EF8126F759D007C0205 /* Defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04F72EF7126F759D007C0205 /* Defaults.plist */; };
 		04F931600FB8579E003FFCB3 /* FrameRateCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F9315F0FB8579E003FFCB3 /* FrameRateCalculator.m */; };
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
-		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
@@ -56,11 +56,12 @@
 		04C34C8011123FEB0080BDEB /* NapiProjektEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NapiProjektEngine.m; sourceTree = "<group>"; };
 		04D03FFE110F6DB1005DA3B0 /* SubtitlesConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubtitlesConverter.h; sourceTree = "<group>"; };
 		04D03FFF110F6DB1005DA3B0 /* SubtitlesConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubtitlesConverter.m; sourceTree = "<group>"; };
+		04EBB4FB1371B6E400CC15DF /* BTUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTUtils.h; sourceTree = "<group>"; };
+		04EBB4FC1371B6E400CC15DF /* BTUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTUtils.m; sourceTree = "<group>"; };
 		04F72E37126F68BC007C0205 /* AppPreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppPreferencesController.m; sourceTree = "<group>"; };
-		04F72EF7126F759D007C0205 /* PreferencesDefaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PreferencesDefaults.plist; sourceTree = "<group>"; };
+		04F72EF7126F759D007C0205 /* Defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Defaults.plist; sourceTree = "<group>"; };
 		04F9315E0FB8579E003FFCB3 /* FrameRateCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrameRateCalculator.h; sourceTree = "<group>"; };
 		04F9315F0FB8579E003FFCB3 /* FrameRateCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FrameRateCalculator.m; sourceTree = "<group>"; };
-		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		1DDD58150DA1D0A300B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -125,6 +126,8 @@
 			children = (
 				04F9315E0FB8579E003FFCB3 /* FrameRateCalculator.h */,
 				04F9315F0FB8579E003FFCB3 /* FrameRateCalculator.m */,
+				04EBB4FB1371B6E400CC15DF /* BTUtils.h */,
+				04EBB4FC1371B6E400CC15DF /* BTUtils.m */,
 			);
 			name = Helper;
 			sourceTree = "<group>";
@@ -202,11 +205,10 @@
 				04A7F9DF11217A02001DAEE8 /* Napiprojekt.png */,
 				04A7F8881120B8AD001DAEE8 /* General.png */,
 				04AF2E90111F6C1000EF0D5C /* 7za */,
+				04F72EF7126F759D007C0205 /* Defaults.plist */,
 				8D1107310486CEB800E47090 /* Info.plist */,
-				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
 				04A7F9C011216EF4001DAEE8 /* Preferences.xib */,
-				04F72EF7126F759D007C0205 /* PreferencesDefaults.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -273,13 +275,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
 				04AF2E91111F6C1000EF0D5C /* 7za in Resources */,
 				04A7F9C111216EF4001DAEE8 /* Preferences.xib in Resources */,
 				04A7F8891120B8AD001DAEE8 /* General.png in Resources */,
 				04A7F9E011217A02001DAEE8 /* Napiprojekt.png in Resources */,
-				04F72EF8126F759D007C0205 /* PreferencesDefaults.plist in Resources */,
+				04F72EF8126F759D007C0205 /* Defaults.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +302,7 @@
 				0471C884124AB368001A567D /* FileHandler.m in Sources */,
 				04F72E38126F68BC007C0205 /* AppPreferencesController.m in Sources */,
 				04AFD19513702BBB00AFE116 /* SubtitlesDownloader.m in Sources */,
+				04EBB4FD1371B6E500CC15DF /* BTUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,14 +315,6 @@
 				04A7F8791120B7F6001DAEE8 /* English */,
 			);
 			name = Preferences.xib;
-			sourceTree = "<group>";
-		};
-		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				089C165DFE840E0CC02AAC07 /* English */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 		1DDD58140DA1D0A300B32029 /* MainMenu.xib */ = {
@@ -366,6 +360,7 @@
 					"$(inherited)",
 					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
 				);
+				GCC_ENABLE_OBJC_GC = required;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = WhatSub_Prefix.pch;

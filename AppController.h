@@ -12,6 +12,7 @@
 @class FileHandler;
 
 @interface AppController : NSObject {
+    NSArray* allowedFileTypes;
     IBOutlet NSWindow* mainWindow;
 	IBOutlet FileHandler* fileHandler;
 }

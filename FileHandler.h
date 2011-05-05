@@ -10,9 +10,10 @@
 
 @class SubtitlesConverter;
 @class SubtitlesDownloader;
-@class AppController;
 
 @interface FileHandler : NSObject {
+    NSArray* subtitlesFiles;
+    NSArray* movieFiles;
 	SubtitlesConverter* converter;
 	SubtitlesDownloader* downloader;
     IBOutlet NSWindow* loadingWindow;

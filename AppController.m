@@ -10,6 +10,7 @@
 #import "DropFileView.h"
 #import "AppPreferencesController.h"
 #import "FileHandler.h"
+#import "BTUtils.h"
 
 @implementation AppController
 
@@ -19,8 +20,13 @@ static AppController* instance = nil;
 
 - (id)init
 {	
-	[super init];
-    instance = self;
+	self = [super init];
+    if (self)
+    {
+        instance = self;
+        allowedFileTypes = [[BTUtils typeExtensionsForName:@"Movie"] 
+                                     arrayByAddingObjectsFromArray:[BTUtils typeExtensionsForName:@"Subtitles"]];
+    }    
 	return self;
 }
 
@@ -28,7 +34,7 @@ static AppController* instance = nil;
 {
 	// Register application defaults
 	NSBundle* mainBundle = [NSBundle mainBundle];
-	NSString* defaultsFile = [mainBundle pathForResource:@"PreferencesDefaults" ofType:@"plist"];
+	NSString* defaultsFile = [mainBundle pathForResource:@"Defaults" ofType:@"plist"];
 	NSDictionary* defaults = [NSDictionary dictionaryWithContentsOfFile:defaultsFile];
 	NSUserDefaults* standardUserDefaults = [NSUserDefaults standardUserDefaults];
 	[standardUserDefaults registerDefaults:defaults];
@@ -60,7 +66,6 @@ static AppController* instance = nil;
 /* handle files opened via the menu item */
 - (IBAction)openFile:(id)sender
 {	
-	NSArray* allowedFileTypes = [NSArray arrayWithObjects:@"txt", @"avi", nil];
 	NSOpenPanel* openPanel = [NSOpenPanel openPanel];
 	
 	[openPanel setCanChooseFiles:YES];

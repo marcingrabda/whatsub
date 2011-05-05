@@ -15,7 +15,8 @@
 
 - (id)initWithFrame:(NSRect)frame
 {
-    if (self = [super initWithFrame:frame])
+    self = [super initWithFrame:frame];
+    if (self)
 	{
 		NSString* pboardType = NSFilenamesPboardType;		
 		NSArray* dragTypes = [NSArray arrayWithObjects:pboardType,nil];

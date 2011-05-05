@@ -23,7 +23,21 @@
 		<dict>
 			<key>CFBundleTypeExtensions</key>
 			<array>
+				<string>asf</string>
 				<string>avi</string>
+				<string>dat</string>
+				<string>divx</string>
+				<string>m4v</string>
+				<string>mkv</string>
+				<string>mov</string>
+				<string>mp4</string>
+				<string>mpeg</string>
+				<string>mpg</string>
+				<string>ogg</string>
+				<string>ogm</string>
+				<string>rm</string>
+				<string>rmvb</string>
+				<string>wmv</string>
 			</array>
 			<key>CFBundleTypeName</key>
 			<string>Movie</string>
