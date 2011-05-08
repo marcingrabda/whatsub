@@ -29,6 +29,7 @@
 
 - (void)startProcessingFiles:(NSArray*)files
 {
+    [progressIndicator setUsesThreadedAnimation:YES];
     [progressIndicator startAnimation:self];
     NSWindow* mainWindow = [[AppController instance] mainWindow];
     [NSApp beginSheet:loadingWindow modalForWindow:mainWindow modalDelegate:nil didEndSelector:nil contextInfo:nil];
