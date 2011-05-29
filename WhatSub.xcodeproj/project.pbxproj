@@ -101,6 +101,13 @@
 			name = Subtitles;
 			sourceTree = "<group>";
 		};
+		04C90CAA1388626D0060E346 /* Test Cases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Test Cases";
+			sourceTree = "<group>";
+		};
 		04F72BEA126F0E84007C0205 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				080E96DDFE201D6D7F000001 /* Classes */,
+				04C90CAA1388626D0060E346 /* Test Cases */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
@@ -347,7 +355,7 @@
 				INSTALL_PATH = /Applications;
 				MACOSX_DEPLOYMENT_TARGET = "";
 				PRODUCT_NAME = WhatSub;
-				SDKROOT = "";
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -355,6 +363,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -368,7 +377,7 @@
 				INSTALL_PATH = /Applications;
 				MACOSX_DEPLOYMENT_TARGET = "";
 				PRODUCT_NAME = WhatSub;
-				SDKROOT = "";
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
