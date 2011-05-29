@@ -12,5 +12,11 @@
 }
 
 - (void)convert:(NSString*)pathToFile;
+- (NSArray*)processTMPlayer:(NSArray*)lines;
+- (NSArray*)processMicroDVD:(NSArray*)lines forMovie:(NSString*)pathToFile;
+- (NSArray*)processMPL2:(NSArray*)lines;
+- (void)printSubRip:(NSArray*)input;
+- (NSString*)formatSubRipTime:(NSNumber*)value;
+- (NSString*)formatSubRipText:(NSString*)value;
 
 @end
