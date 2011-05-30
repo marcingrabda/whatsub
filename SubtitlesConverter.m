@@ -45,7 +45,9 @@ NSString* const MPL2_REGEX = @"^\\[(\\d+)\\]\\[(\\d+)\\](.*)";
     }
     else if ([[firstLine captureComponentsMatchedByRegex:MDVD_REGEX] count] > 0)
     {
-        subRipArray = [self processMicroDVD:lines forMovie:pathToFile];
+        //TODO check the other extensions
+        NSString* moviePath = [[pathToFile stringByDeletingPathExtension] stringByAppendingPathExtension:@"avi"];
+        subRipArray = [self processMicroDVD:lines forMovie:moviePath];
     }
     else if ([[firstLine captureComponentsMatchedByRegex:MPL2_REGEX] count] > 0)
     {
@@ -60,13 +62,14 @@ NSString* const MPL2_REGEX = @"^\\[(\\d+)\\]\\[(\\d+)\\](.*)";
     
     if (subRipArray != nil)
     {
-        [self printSubRip:subRipArray];        
+        //TODO check if the file exists
+        NSString* srtFilePath = [[pathToFile stringByDeletingPathExtension] stringByAppendingPathExtension:@"srt"];
+        [self printSubRip:subRipArray toFile:srtFilePath];
     }
 }
 
-- (NSArray*)processMicroDVD:(NSArray *)lines forMovie:(NSString *)pathToFile
+- (NSArray*)processMicroDVD:(NSArray *)lines forMovie:(NSString *)moviePath
 {
-    NSString* moviePath = [[pathToFile stringByDeletingPathExtension] stringByAppendingPathExtension:@"avi"];    
     BOOL movieFileExists = [[NSFileManager defaultManager] fileExistsAtPath:moviePath];
     double framerate = 25.0;
     if (movieFileExists)
@@ -157,8 +160,9 @@ NSString* const MPL2_REGEX = @"^\\[(\\d+)\\]\\[(\\d+)\\](.*)";
     return outputArray;
 }
 
-- (void)printSubRip:(NSArray *)input
+- (void)printSubRip:(NSArray *)input toFile:(NSString *)srtFilePath
 {
+    NSMutableString* entireText = [NSMutableString string];
     int lineNumber = 1;
     for (NSArray* line in input)
     {
@@ -169,10 +173,14 @@ NSString* const MPL2_REGEX = @"^\\[(\\d+)\\]\\[(\\d+)\\](.*)";
         NSString* text = [line objectAtIndex:2];
         NSString* formattedText = [self formatSubRipText:text];
         
-        NSString* print = [NSString stringWithFormat:@"%d\n%@ --> %@\n%@\n\n", 
+        NSString* linePrint = [NSString stringWithFormat:@"%d\n%@ --> %@\n%@\n\n", 
                            lineNumber++, formattedStart, formattedEnd, formattedText, nil];
-        NSLog(@"%@", print);
+        [entireText appendString:linePrint];
     }
+    
+    //TODO take the encoding from the user preferences
+    NSData *data = [entireText dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:YES];
+    [data writeToFile:srtFilePath atomically:YES];
 }
 
 /* time conversion from miliseconds */
@@ -193,9 +201,16 @@ NSString* const MPL2_REGEX = @"^\\[(\\d+)\\]\\[(\\d+)\\](.*)";
     return [NSString stringWithFormat:@"%02d:%02d:%02d,%03d", hours, minutes, seconds, miliseconds, nil];
 }
 
-/* additional formatting for text */
+/* TODO additional formatting for text */
 - (NSString*)formatSubRipText:(NSString*)value
 {
+    /*
+    NSMutableString* mutableValue = [[NSMutableString alloc] initWithString:value];
+    NSRange range = NSMakeRange(0, [mutableValue length]);
+    [mutableValue replaceOccurrencesOfString:@"/" withString:@"" options:NSLiteralSearch range:range];
+    [mutableValue replaceOccurrencesOfString:@"|" withString:@"\n" options:NSLiteralSearch range:range];
+    return mutableValue;
+     */
     value = [value stringByReplacingOccurrencesOfString:@"/" withString:@""];
     value = [value stringByReplacingOccurrencesOfString:@"|" withString:@"\n"];
     return value;

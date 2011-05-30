@@ -15,7 +15,7 @@
 - (NSArray*)processTMPlayer:(NSArray*)lines;
 - (NSArray*)processMicroDVD:(NSArray*)lines forMovie:(NSString*)pathToFile;
 - (NSArray*)processMPL2:(NSArray*)lines;
-- (void)printSubRip:(NSArray*)input;
+- (void)printSubRip:(NSArray*)input toFile:(NSString*)srtFilePath;
 - (NSString*)formatSubRipTime:(NSNumber*)value;
 - (NSString*)formatSubRipText:(NSString*)value;
 
