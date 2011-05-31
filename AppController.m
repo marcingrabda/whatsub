@@ -24,15 +24,15 @@ static AppController* instance = nil;
     if (self)
     {
         instance = self;
-        allowedFileTypes = [[AppUtil typeExtensionsForName:@"Movie"] 
-                                     arrayByAddingObjectsFromArray:[AppUtil typeExtensionsForName:@"Subtitles"]];
+        allowedFileTypes = [[AppUtil typeExtensionsForName:@"Movie"] arrayByAddingObjectsFromArray:
+                            [AppUtil typeExtensionsForName:@"Subtitles"]];
     }    
 	return self;
 }
 
+/* register application defaults */
 + (void)initialize
 {
-	// Register application defaults
 	NSBundle* mainBundle = [NSBundle mainBundle];
 	NSString* defaultsFile = [mainBundle pathForResource:@"Defaults" ofType:@"plist"];
 	NSDictionary* defaults = [NSDictionary dictionaryWithContentsOfFile:defaultsFile];

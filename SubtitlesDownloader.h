@@ -11,6 +11,7 @@
 @class NapiProjektEngine;
 
 @interface SubtitlesDownloader : NSObject {
+@private
 	NapiProjektEngine* engine;
 }
 

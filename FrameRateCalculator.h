@@ -10,6 +10,7 @@
 #import <QTKit/QTKit.h>
 
 @interface FrameRateCalculator : NSObject {
+@private
 }
 
 + (float)calculateFrameRateForMovie:(QTMovie*)movie;

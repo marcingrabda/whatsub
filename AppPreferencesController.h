@@ -10,6 +10,7 @@
 #import "DBPrefsWindowController.h"
 
 @interface AppPreferencesController : DBPrefsWindowController {
+@private
 	IBOutlet NSView* generalPrefsView;
 	IBOutlet NSView* accountPrefsView;
 }

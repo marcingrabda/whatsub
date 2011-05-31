@@ -11,7 +11,6 @@
 
 @interface AppUtil : NSObject {
 @private
-    
 }
 
 + (NSArray *) typeExtensionsForName:(NSString *)typeName;

@@ -9,6 +9,7 @@
 #import <Cocoa/Cocoa.h>
 
 @interface SubtitlesConverter : NSObject {
+@private
 }
 
 - (void)convert:(NSString*)pathToFile;

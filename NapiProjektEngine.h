@@ -9,6 +9,7 @@
 #import <Cocoa/Cocoa.h>
 
 @interface NapiProjektEngine : NSObject {
+@private
 }
 
 - (NSData*)retrieveSubtitlesForMovieInPath:(NSString*)moviePath hash:(NSString**)hashPtr;

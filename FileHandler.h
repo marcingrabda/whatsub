@@ -12,6 +12,7 @@
 @class SubtitlesDownloader;
 
 @interface FileHandler : NSObject {
+@private
     NSArray* subtitlesFiles;
     NSArray* movieFiles;
 	SubtitlesConverter* converter;

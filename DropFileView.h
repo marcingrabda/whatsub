@@ -11,6 +11,7 @@
 @class AppController;
 
 @interface DropFileView : NSView {
+@private
 	NSArray* filenames;
 }
 
