@@ -10,7 +10,7 @@
 #import "SubtitlesConverter.h"
 #import "SubtitlesDownloader.h"
 #import "AppController.h"
-#import "BTUtils.h"
+#import "AppUtil.h"
 
 @implementation FileHandler
 
@@ -19,8 +19,8 @@
 	self = [super init];
     if (self)
     {
-        subtitlesFiles = [BTUtils typeExtensionsForName:@"Subtitles"];
-        movieFiles = [BTUtils typeExtensionsForName:@"Movie"];        
+        subtitlesFiles = [AppUtil typeExtensionsForName:@"Subtitles"];
+        movieFiles = [AppUtil typeExtensionsForName:@"Movie"];        
         converter = [[SubtitlesConverter alloc] init];
         downloader = [[SubtitlesDownloader alloc] init];
     }
