@@ -10,7 +10,7 @@
 #import "DropFileView.h"
 #import "AppPreferencesController.h"
 #import "FileHandler.h"
-#import "BTUtils.h"
+#import "AppUtil.h"
 
 @implementation AppController
 
@@ -24,8 +24,8 @@ static AppController* instance = nil;
     if (self)
     {
         instance = self;
-        allowedFileTypes = [[BTUtils typeExtensionsForName:@"Movie"] 
-                                     arrayByAddingObjectsFromArray:[BTUtils typeExtensionsForName:@"Subtitles"]];
+        allowedFileTypes = [[AppUtil typeExtensionsForName:@"Movie"] 
+                                     arrayByAddingObjectsFromArray:[AppUtil typeExtensionsForName:@"Subtitles"]];
     }    
 	return self;
 }
@@ -60,7 +60,18 @@ static AppController* instance = nil;
 - (void)filesDragged:(DropFileView*)sender
 {	
 	NSArray* files = [sender filenames];
-	[fileHandler startProcessingFiles:files];
+    NSMutableArray* filteredFiles = [NSMutableArray new];
+    for (NSString* file in files)
+    {
+        if ([allowedFileTypes containsObject:[file pathExtension]])
+        {
+            [filteredFiles addObject:file];
+        }
+    }
+    if ([filteredFiles count] > 0)
+    {
+        [fileHandler startProcessingFiles:filteredFiles];
+    }
 }
 
 /* handle files opened via the menu item */
