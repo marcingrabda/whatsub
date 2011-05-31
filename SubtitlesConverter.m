@@ -9,6 +9,7 @@
 #import "SubtitlesConverter.h"
 #import "FrameRateCalculator.h"
 #import "RegexKitLite.h"
+#import "AppUtil.h"
 
 @implementation SubtitlesConverter
 
@@ -178,8 +179,8 @@ NSString* const MPL2_REGEX = @"^\\[(\\d+)\\]\\[(\\d+)\\](.*)";
         [entireText appendString:linePrint];
     }
     
-    //TODO take the encoding from the user preferences
-    NSData *data = [entireText dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:YES];
+    NSStringEncoding encoding = [AppUtil getOutputEncoding];
+    NSData *data = [entireText dataUsingEncoding:encoding allowLossyConversion:YES];
     [data writeToFile:srtFilePath atomically:YES];
 }
 

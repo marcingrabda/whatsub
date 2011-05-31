@@ -58,16 +58,25 @@ static AppController* instance = nil;
 
 /* handle files dropped on the view area */
 - (void)filesDragged:(DropFileView*)sender
-{	
+{
 	NSArray* files = [sender filenames];
     NSMutableArray* filteredFiles = [NSMutableArray new];
+    NSMutableArray* updatedAllowedFileTypes  = [[NSMutableArray alloc] initWithArray:allowedFileTypes];
+    
+    if (![AppUtil isSRTOnlyConversionAllowed])
+    {
+        [updatedAllowedFileTypes removeObjectsInArray:[AppUtil typeExtensionsForName:@"Subtitles"]];
+    }
+    
     for (NSString* file in files)
     {
-        if ([allowedFileTypes containsObject:[file pathExtension]])
-        {
+        NSString* pathExtension = [file pathExtension];
+        if ([updatedAllowedFileTypes containsObject:pathExtension])
+        {            
             [filteredFiles addObject:file];
         }
     }
+    
     if ([filteredFiles count] > 0)
     {
         [fileHandler startProcessingFiles:filteredFiles];

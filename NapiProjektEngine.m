@@ -8,6 +8,7 @@
 
 #import "NapiProjektEngine.h"
 #import <openssl/md5.h>
+#import "AppUtil.h"
 
 @implementation NapiProjektEngine
 
@@ -52,9 +53,7 @@
 
 - (NSString*)getURLForHash:(NSString*)hash token:(NSString*)token
 {
-	NSDictionary* languages = [NSDictionary dictionaryWithObjectsAndKeys:
-							   @"PL", @"0",
-							   @"EN", @"1", nil];
+
 	
 	/* TODO move to configuration file... */
 	NSString* urlFormatString = 
@@ -62,13 +61,11 @@
 	
 	NSUserDefaults* settings = [NSUserDefaults standardUserDefaults];
 	
-	NSNumber* langKey = [settings valueForKey:@"NPLanguage"];
-	NSString* langKeyString = [langKey stringValue];
-	NSString* language = [languages objectForKey:langKeyString];
-	NSString* nickname = [settings valueForKey:@"NPUsername"];
-	NSString* password = [settings valueForKey:@"NPPassword"];
+    NSString* langCode = [AppUtil getNPLanguageCode];
+	NSString* nickname = [AppUtil getNPUsername];
+	NSString* password = [AppUtil getNPPassword];
 	
-	return [NSString stringWithFormat:urlFormatString, language, hash, token, nickname, password];
+	return [NSString stringWithFormat:urlFormatString, langCode, hash, token, nickname, password];
 }
 
 - (NSString*)npFDigest:(NSString*)input

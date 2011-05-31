@@ -13,6 +13,12 @@
 @private
 }
 
-+ (NSArray *) typeExtensionsForName:(NSString *)typeName;
++ (NSArray*)typeExtensionsForName:(NSString*)typeName;
++ (NSString*)getNPUsername;
++ (NSString*)getNPPassword;
++ (NSString*)getNPLanguageCode;
++ (NSString*)getOutputFormat;
++ (NSStringEncoding)getOutputEncoding;
++ (BOOL)isSRTOnlyConversionAllowed;
 
 @end

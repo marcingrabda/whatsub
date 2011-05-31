@@ -24,7 +24,7 @@
     [super dealloc];
 }
 
-+ (NSArray *) typeExtensionsForName:(NSString *)typeName
++ (NSArray*)typeExtensionsForName:(NSString*)typeName
 {
 	int i;
 	NSArray *typeList = [[[NSBundle mainBundle] infoDictionary]
@@ -35,6 +35,51 @@
 			return [[typeList objectAtIndex:i] objectForKey:@"CFBundleTypeExtensions"];
 	}
 	return nil;
+}
+
++ (NSString*)getNPUsername
+{
+    return [[NSUserDefaults standardUserDefaults] valueForKey:@"NPUsername"];
+}
+
++ (NSString*)getNPPassword
+{
+    return [[NSUserDefaults standardUserDefaults] valueForKey:@"NPPassword"];    
+}
+
++ (NSString*)getNPLanguageCode
+{
+    NSString* language = [[NSUserDefaults standardUserDefaults] valueForKey:@"NPLanguage"];
+    NSDictionary* languages = [NSDictionary dictionaryWithObjectsAndKeys:
+							   @"PL", @"Polish",
+							   @"EN", @"English", nil];
+    return [languages objectForKey:language];
+}
+
++ (NSString*)getOutputFormat
+{
+    return [[NSUserDefaults standardUserDefaults] valueForKey:@"OutputFormat"];    
+}
+
++ (NSStringEncoding)getOutputEncoding
+{
+    NSString* encoding = [[NSUserDefaults standardUserDefaults] valueForKey:@"OutputEncoding"];    
+    NSDictionary* encodings = [NSDictionary dictionaryWithObjectsAndKeys:
+                               [NSNumber numberWithUnsignedInteger:NSUTF8StringEncoding], @"UTF-8",
+                               [NSNumber numberWithUnsignedInteger:NSUTF16StringEncoding], @"UTF-16",
+                               [NSNumber numberWithUnsignedInteger:NSISOLatin1StringEncoding], @"ISO-8859-1",
+                               [NSNumber numberWithUnsignedInteger:NSWindowsCP1252StringEncoding], @"CP1252",
+                               [NSNumber numberWithUnsignedInteger:NSISOLatin2StringEncoding], @"ISO-8859-2",
+                               [NSNumber numberWithUnsignedInteger:NSWindowsCP1250StringEncoding], @"CP1250",
+                               nil];
+    NSNumber* encodingNumber = [encodings objectForKey:encoding];
+    return [encodingNumber unsignedIntegerValue];
+}
+
++ (BOOL)isSRTOnlyConversionAllowed
+{
+    NSNumber* wrappedBool = [[NSUserDefaults standardUserDefaults] valueForKey:@"AllowSRTOnlyConversion"];
+    return [wrappedBool boolValue];
 }
 
 @end

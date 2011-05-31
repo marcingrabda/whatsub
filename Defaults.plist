@@ -2,17 +2,17 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>AllowSRTOnlyConversion</key>
+	<true/>
 	<key>NPLanguage</key>
-	<integer>0</integer>
+	<string>Polish</string>
 	<key>NPPassword</key>
 	<string></string>
 	<key>NPUsername</key>
 	<string></string>
-	<key>OutputFormat</key>
-	<integer>0</integer>
 	<key>OutputEncoding</key>
-	<integer>0</integer>
-	<key>AllowSRTOnlyConversion</key>
-	<false/>
+	<string>UTF-8</string>
+	<key>OutputFormat</key>
+	<string>TXT</string>
 </dict>
 </plist>
