@@ -52,15 +52,10 @@
 }
 
 - (NSString*)getURLForHash:(NSString*)hash token:(NSString*)token
-{
-
-	
+{	
 	/* TODO move to configuration file... */
 	NSString* urlFormatString = 
 		@"http://napiprojekt.pl/unit_napisy/dl.php?l=%@&f=%@&t=%@&v=other&kolejka=false&nick=%@&pass=%@";
-	
-	NSUserDefaults* settings = [NSUserDefaults standardUserDefaults];
-	
     NSString* langCode = [AppUtil getNPLanguageCode];
 	NSString* nickname = [AppUtil getNPUsername];
 	NSString* password = [AppUtil getNPPassword];

@@ -19,13 +19,9 @@
 	
 	QTTime QTTime = [[media attributeForKey:QTMediaDurationAttribute] QTTimeValue];
 	long movieSeconds = [FrameRateCalculator convertQTTimeToSeconds:QTTime];
-	NSLog(@"movie length in seconds: %ld", movieSeconds);
-	
 	long sampleCount = [[media attributeForKey:QTMediaSampleCountAttribute] longValue];
-	NSLog(@"sampleCount: %ld", sampleCount);
-	
 	float calculatedFrameRate = (float)sampleCount / (float)movieSeconds;
-	NSLog(@"framerate: %f", calculatedFrameRate);
+	NSLog(@"Movie framerate: %f", calculatedFrameRate);
 	
 	return calculatedFrameRate;
 }

@@ -20,39 +20,24 @@ NSString* const MPL2_REGEX = @"^\\[(\\d+)\\]\\[(\\d+)\\](.*)";
 - (void)convert:(NSString*)pathToFile
 {	
 	NSLog(@"Processing file '%@'...", pathToFile);
-	NSError* error = nil;
-	
-	NSString* fileContents = [NSString stringWithContentsOfFile:pathToFile
-													   encoding:NSWindowsCP1250StringEncoding
-														  error:&error];
-	if (error != nil) {
-		NSLog(@"Error: %@", [error localizedDescription]);
-	}
-	
-	// try LF first
-	NSArray *lines = [fileContents componentsSeparatedByString:@"\n"];
+	NSArray* fileContents = [self readFile:pathToFile];
     
-	// if everything is in one line, try with CR again
-	if ([lines count] < 2) {
-		lines = [fileContents componentsSeparatedByString:@"\r"];
-	}
-    
-	NSString* firstLine = [lines objectAtIndex:0];
+	NSString* firstLine = [fileContents objectAtIndex:0];
     NSArray* subRipArray = nil;
     
     if ([[firstLine captureComponentsMatchedByRegex:TMP_REGEX] count] > 0)
     {
-        subRipArray = [self processTMPlayer:lines];
+        subRipArray = [self processTMPlayer:fileContents];
     }
     else if ([[firstLine captureComponentsMatchedByRegex:MDVD_REGEX] count] > 0)
     {
         //TODO check the other extensions
         NSString* moviePath = [[pathToFile stringByDeletingPathExtension] stringByAppendingPathExtension:@"avi"];
-        subRipArray = [self processMicroDVD:lines forMovie:moviePath];
+        subRipArray = [self processMicroDVD:fileContents forMovie:moviePath];
     }
     else if ([[firstLine captureComponentsMatchedByRegex:MPL2_REGEX] count] > 0)
     {
-        subRipArray = [self processMPL2:lines];
+        subRipArray = [self processMPL2:fileContents];
     }
     else
     {
@@ -67,6 +52,47 @@ NSString* const MPL2_REGEX = @"^\\[(\\d+)\\]\\[(\\d+)\\](.*)";
         NSString* srtFilePath = [[pathToFile stringByDeletingPathExtension] stringByAppendingPathExtension:@"srt"];
         [self printSubRip:subRipArray toFile:srtFilePath];
     }
+}
+
+- (NSArray*)readFile:(NSString*)pathToFile
+{
+    NSError* error = nil;
+    NSStringEncoding encoding = -1;
+	NSString* fileContents = [NSString stringWithContentsOfFile:pathToFile usedEncoding:&encoding error:&error];
+    
+    if (fileContents == nil)
+    {
+        NSArray* encodings = [NSArray arrayWithObjects:
+                              [NSNumber numberWithUnsignedInteger:NSUTF8StringEncoding],
+                              [NSNumber numberWithUnsignedInteger:NSWindowsCP1250StringEncoding],
+                              [NSNumber numberWithUnsignedInteger:NSWindowsCP1252StringEncoding],
+                              [NSNumber numberWithUnsignedInteger:NSISOLatin2StringEncoding],
+                              [NSNumber numberWithUnsignedInteger:NSISOLatin1StringEncoding], nil];
+        
+        for (int i = 0; i < [encodings count] && fileContents == nil; i++)
+        {
+            encoding = [[encodings objectAtIndex:i] unsignedIntegerValue];
+            fileContents = [NSString stringWithContentsOfFile:pathToFile encoding:encoding error:&error];
+        }
+        
+        if (fileContents == nil)
+        {
+            NSString* reason = @"Unknown file encoding";
+            NSException* e = [NSException exceptionWithName:@"SubtitlesException" reason:reason userInfo:nil];
+            @throw e;
+        }
+    }
+    NSLog(@"Encoding guessed: %@", [NSString localizedNameOfStringEncoding:encoding]);
+	
+	// try LF first
+	NSArray *lines = [fileContents componentsSeparatedByString:@"\n"];
+    
+	// if everything is in one line, try with CR again
+	if ([lines count] < 2) {
+		lines = [fileContents componentsSeparatedByString:@"\r"];
+	}
+    
+    return lines;
 }
 
 - (NSArray*)processMicroDVD:(NSArray *)lines forMovie:(NSString *)moviePath
