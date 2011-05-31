@@ -8,5 +8,11 @@
 	<string></string>
 	<key>NPUsername</key>
 	<string></string>
+	<key>OutputFormat</key>
+	<integer>0</integer>
+	<key>OutputEncoding</key>
+	<integer>0</integer>
+	<key>AllowSRTOnlyConversion</key>
+	<false/>
 </dict>
 </plist>
