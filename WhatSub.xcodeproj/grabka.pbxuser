@@ -16,22 +16,22 @@
 			sepNavWindowFrame = "{{264, 100}, {1375, 946}}";
 		};
 	};
+	0419F13B1373066300BD9920 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 04AFD19413702BBB00AFE116 /* SubtitlesDownloader.m */;
+		name = "SubtitlesDownloader.m: 55";
+		rLen = 0;
+		rLoc = 1718;
+		rType = 0;
+		vrLen = 1699;
+		vrLoc = 84;
+	};
 	042FC3791370228F00A982B3 /* FrameRateCalculator.m */ = {
 		isa = PBXFileReference;
 		lastKnownFileType = sourcecode.c.objc;
 		name = FrameRateCalculator.m;
 		path = /Users/grabka/Documents/Xcode/whatsub/FrameRateCalculator.m;
 		sourceTree = "<absolute>";
-	};
-	0433DBFC1370AFE400380653 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 04AFD19413702BBB00AFE116 /* SubtitlesDownloader.m */;
-		name = "SubtitlesDownloader.m: 54";
-		rLen = 0;
-		rLoc = 1718;
-		rType = 0;
-		vrLen = 1264;
-		vrLoc = 504;
 	};
 	0433DC031370AFF600380653 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -140,14 +140,6 @@
 			sepNavVisRange = "{0, 367}";
 		};
 	};
-	04AF5FE11152EB47007C3E59 /* TODO */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1051, 868}}";
-			sepNavSelRange = "{295, 0}";
-			sepNavVisRange = "{0, 295}";
-			sepNavWindowFrame = "{{38, 108}, {1165, 924}}";
-		};
-	};
 	04AFD19313702BBB00AFE116 /* SubtitlesDownloader.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1051, 868}}";
@@ -158,9 +150,9 @@
 	};
 	04AFD19413702BBB00AFE116 /* SubtitlesDownloader.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1051, 1003}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1051, 1020}}";
 			sepNavSelRange = "{1718, 0}";
-			sepNavVisRange = "{146, 1622}";
+			sepNavVisRange = "{84, 1699}";
 		};
 	};
 	04AFD1A5137044DA00AFE116 /* PBXTextBookmark */ = {
@@ -195,7 +187,6 @@
 	};
 	04AFD1A8137044DA00AFE116 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 04AF5FE11152EB47007C3E59 /* TODO */;
 		name = "TODO: 5";
 		rLen = 0;
 		rLoc = 295;
@@ -360,14 +351,6 @@
 			sepNavSelRange = "{258, 26}";
 			sepNavVisRange = "{0, 0}";
 			sepNavWindowFrame = "{{15, 86}, {897, 787}}";
-		};
-	};
-	089C165DFE840E0CC02AAC07 /* English */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1584, 462}}";
-			sepNavSelRange = "{45, 0}";
-			sepNavVisRange = "{0, 45}";
-			sepNavWindowFrame = "{{61, 56}, {968, 775}}";
 		};
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
@@ -556,11 +539,11 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 326152060;
-			PBXWorkspaceStateSaveDate = 326152060;
+			PBXPerProjectTemplateStateSaveDate = 326305370;
+			PBXWorkspaceStateSaveDate = 326305370;
 		};
 		perUserProjectItems = {
-			0433DBFC1370AFE400380653 /* PBXTextBookmark */ = 0433DBFC1370AFE400380653 /* PBXTextBookmark */;
+			0419F13B1373066300BD9920 /* PBXTextBookmark */ = 0419F13B1373066300BD9920 /* PBXTextBookmark */;
 			0433DC031370AFF600380653 /* PBXTextBookmark */ = 0433DC031370AFF600380653 /* PBXTextBookmark */;
 			04AFD1A5137044DA00AFE116 /* PBXTextBookmark */ = 04AFD1A5137044DA00AFE116 /* PBXTextBookmark */;
 			04AFD1A6137044DA00AFE116 /* PBXTextBookmark */ = 04AFD1A6137044DA00AFE116 /* PBXTextBookmark */;

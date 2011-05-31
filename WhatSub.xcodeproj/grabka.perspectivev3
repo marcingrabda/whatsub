@@ -232,6 +232,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -281,7 +283,7 @@
 							<array>
 								<array>
 									<integer>19</integer>
-									<integer>13</integer>
+									<integer>15</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -332,7 +334,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>0433DC031370AFF600380653</string>
+										<string>0419F13B1373066300BD9920</string>
 										<key>history</key>
 										<array>
 											<string>04AFD1A5137044DA00AFE116</string>
@@ -348,7 +350,7 @@
 											<string>04AFD27B13705CF400AFE116</string>
 											<string>04AFD27C13705CF400AFE116</string>
 											<string>04AFD2F41370767700AFE116</string>
-											<string>0433DBFC1370AFE400380653</string>
+											<string>0433DC031370AFF600380653</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -471,11 +473,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>0433DBF81370AF7F00380653</string>
+				<string>0419F1381373066300BD9920</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>0433DBF91370AF7F00380653</string>
+				<string>0419F1391373066300BD9920</string>
 				<string>046545F50FB38B1200D9E8FA</string>
-				<string>0433DBFA1370AF7F00380653</string>
+				<string>0419F13A1373066300BD9920</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
