@@ -18,9 +18,9 @@ NSString* const TMP_REGEX = @"^(\\d+):(\\d+):(\\d+):(.*)";
 NSString* const MDVD_REGEX = @"^\\{(\\d+)\\}\\{(\\d+)\\}(.*)";
 NSString* const MPL2_REGEX = @"^\\[(\\d+)\\]\\[(\\d+)\\](.*)";
 
-- (void)convert:(NSString*)pathToFile toFile:(NSString*)outputFilePath
+- (void)convert:(NSString*)pathToFile toFile:(NSString*)outputFilePath forMovie:(NSString*)moviePath
 {	
-	NSLog(@"Processing file '%@'...", pathToFile);
+	NSLog(@"Processing file %@", pathToFile);
 	NSArray* fileContents = [self readFile:pathToFile];
     
 	NSString* firstLine = [fileContents objectAtIndex:0];
@@ -32,8 +32,6 @@ NSString* const MPL2_REGEX = @"^\\[(\\d+)\\]\\[(\\d+)\\](.*)";
     }
     else if ([[firstLine captureComponentsMatchedByRegex:MDVD_REGEX] count] > 0)
     {
-        //TODO check the other extensions
-        NSString* moviePath = [[pathToFile stringByDeletingPathExtension] stringByAppendingPathExtension:@"avi"];
         subRipArray = [self processMicroDVD:fileContents forMovie:moviePath];
     }
     else if ([[firstLine captureComponentsMatchedByRegex:MPL2_REGEX] count] > 0)

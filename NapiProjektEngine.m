@@ -21,7 +21,7 @@
 	NSString* urlString = [self getURLForHash:hash token:token];
 	NSURL* url = [NSURL URLWithString:urlString];
 	
-	NSLog(@"Retrieving subtitles: %@", urlString);
+	NSLog(@"Retrieving subtitles from %@", urlString);
 	NSData* contents = [NSData dataWithContentsOfURL:url options:0 error:&error];
 	
 	[hash retain];

@@ -30,7 +30,7 @@
 {	
 	NSError* error;
 	
-	NSLog(@"Loading movie: %@", filePath);
+	NSLog(@"Loading movie %@", filePath);
 	QTMovie* movie = [QTMovie movieWithFile:filePath error:&error];
 	
 	return [self calculateFrameRateForMovie:movie];

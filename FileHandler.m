@@ -63,11 +63,13 @@
 
 - (void)processFile:(NSString*)pathToFile
 {   
+    NSString* outputFilePath = nil;
     NSString* extension = [pathToFile pathExtension];
+    
     if ([subtitlesExtensions containsObject:extension])
     {
-        NSString* outputFilePath = [[pathToFile stringByDeletingPathExtension] stringByAppendingPathExtension:@"srt"];        
-        [converter convert:pathToFile toFile:outputFilePath];
+        outputFilePath = [[pathToFile stringByDeletingPathExtension] stringByAppendingPathExtension:@"srt"];        
+        [converter convert:pathToFile toFile:outputFilePath forMovie:pathToFile];
     }
     else if ([movieExtensions containsObject:extension])
     {
@@ -75,16 +77,17 @@
         NSString* downloadedFilePath = [downloader download:pathToFile];
         if ([outputFormat isEqualToString:@"SRT"])
         {
-            NSString* outputFilePath = [[pathToFile stringByDeletingPathExtension] stringByAppendingPathExtension:@"srt"];
-            [converter convert:downloadedFilePath toFile:outputFilePath];
+            outputFilePath = [[pathToFile stringByDeletingPathExtension] stringByAppendingPathExtension:@"srt"];
+            [converter convert:downloadedFilePath toFile:outputFilePath forMovie:pathToFile];
         }
         else if ([outputFormat isEqualToString:@"TXT"])
         {
-            NSString* outputFilePath = [[pathToFile stringByDeletingPathExtension] stringByAppendingPathExtension:@"txt"];
-            NSFileManager* fileManager = [NSFileManager new];
-            [fileManager copyItemAtPath:downloadedFilePath toPath:outputFilePath error:NULL];
+            outputFilePath = [[pathToFile stringByDeletingPathExtension] stringByAppendingPathExtension:@"txt"];
+            [[NSFileManager new] copyItemAtPath:downloadedFilePath toPath:outputFilePath error:NULL];
         }
     }
+    
+    NSLog(@"Subtitles written to %@", outputFilePath);
 }
 
 @end
