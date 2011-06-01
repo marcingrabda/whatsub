@@ -19,6 +19,7 @@
 		049C197C139681EC00123E08 /* NapiProjektEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C34C8011123FEB0080BDEB /* NapiProjektEngine.m */; };
 		049C197D1396822200123E08 /* AppPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBB4FC1371B6E400CC15DF /* AppPreferences.m */; };
 		049C197F1396824700123E08 /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 049C197E1396824700123E08 /* libcrypto.dylib */; };
+		04A7C5F71396F27A009849B2 /* WhatSub.icns in Resources */ = {isa = PBXBuildFile; fileRef = 04A7C5F61396F27A009849B2 /* WhatSub.icns */; };
 		04A7F79C1120AFCF001DAEE8 /* DBPrefsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A7F79B1120AFCF001DAEE8 /* DBPrefsWindowController.m */; };
 		04A7F8891120B8AD001DAEE8 /* General.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A7F8881120B8AD001DAEE8 /* General.png */; };
 		04A7F9C111216EF4001DAEE8 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A7F9C011216EF4001DAEE8 /* Preferences.xib */; };
@@ -53,6 +54,7 @@
 		049C197713967D5E00123E08 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		049C197913967E5A00123E08 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		049C197E1396824700123E08 /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = usr/lib/libcrypto.dylib; sourceTree = SDKROOT; };
+		04A7C5F61396F27A009849B2 /* WhatSub.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = WhatSub.icns; sourceTree = "<group>"; };
 		04A7F79A1120AFCF001DAEE8 /* DBPrefsWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBPrefsWindowController.h; sourceTree = "<group>"; };
 		04A7F79B1120AFCF001DAEE8 /* DBPrefsWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBPrefsWindowController.m; sourceTree = "<group>"; };
 		04A7F79D1120B00D001DAEE8 /* AppPreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppPreferencesController.h; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				04A7C5F61396F27A009849B2 /* WhatSub.icns */,
 				04A7F9DF11217A02001DAEE8 /* Napiprojekt.png */,
 				04A7F8881120B8AD001DAEE8 /* General.png */,
 				04AF2E90111F6C1000EF0D5C /* 7za */,
@@ -352,6 +355,7 @@
 				04A7F8891120B8AD001DAEE8 /* General.png in Resources */,
 				04A7F9E011217A02001DAEE8 /* Napiprojekt.png in Resources */,
 				04F72EF8126F759D007C0205 /* Defaults.plist in Resources */,
+				04A7C5F71396F27A009849B2 /* WhatSub.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -558,6 +562,7 @@
 				049C19751396793F00123E08 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "WhatSub" */ = {
 			isa = XCConfigurationList;
