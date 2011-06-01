@@ -72,8 +72,11 @@
 	add[] = { 0x0, 0xd, 0x10, 0xb, 0x5 },
 	a, m, i, t, v;
 	
-	NSMutableString* b = [NSMutableString stringWithString:@""];
+    char vtmp[3] = { 0, 0, 0 };
 	char tmp[2] = { 0, 0 };
+    
+    const char* cin = [input cStringUsingEncoding:NSASCIIStringEncoding];
+	NSMutableString* output = [NSMutableString string];
 	
 	for(int j = 0; j <= 4; j++)
 	{
@@ -81,21 +84,20 @@
 		m = mul[j];
 		i = idx[j];
 		
-		tmp[0] = [input characterAtIndex:i];
+        tmp[0] = cin[i];
 		t = a + (int)(strtol(tmp, NULL, 16));
 		
-		NSString* substring = [[input substringFromIndex:t] substringToIndex:2];
-		const char* cString = [substring cStringUsingEncoding:NSASCIIStringEncoding];
-		
-		v = (int)strtol(cString, NULL, 16);
+        vtmp[0] = cin[t];
+        vtmp[1] = cin[t + 1];
+		v = (int)(strtol(vtmp, NULL, 16));
 		
 		snprintf(tmp, 2, "%x", (v * m) % 0x10);
-		NSString* tmpString = [NSString stringWithCString:tmp encoding:NSASCIIStringEncoding];
-		
-		[b appendString:tmpString];
+        
+		NSString* tmpString = [NSString stringWithCString:tmp encoding:NSASCIIStringEncoding];                        
+		[output appendString:tmpString];
 	}
-	
-	return b;
+    
+	return output;
 }
 
 - (NSString*)md5ForFileInPath:(NSString*)path limitedTo10MB:(BOOL)limited
