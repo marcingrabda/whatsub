@@ -8,10 +8,11 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 
+@class NapiProjektEngine;
 
 @interface TestNapiProjektEngine : SenTestCase {
 @private
-    
+    NapiProjektEngine* engine;
 }
 
 @end

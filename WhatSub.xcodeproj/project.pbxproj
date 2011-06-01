@@ -16,6 +16,9 @@
 		049C1976139679DF00123E08 /* TestNapiProjektEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 049C1958139665E600123E08 /* TestNapiProjektEngine.m */; };
 		049C197813967D5E00123E08 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049C197713967D5E00123E08 /* Cocoa.framework */; };
 		049C197A13967E5A00123E08 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049C197913967E5A00123E08 /* SenTestingKit.framework */; };
+		049C197C139681EC00123E08 /* NapiProjektEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C34C8011123FEB0080BDEB /* NapiProjektEngine.m */; };
+		049C197D1396822200123E08 /* AppPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBB4FC1371B6E400CC15DF /* AppPreferences.m */; };
+		049C197F1396824700123E08 /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 049C197E1396824700123E08 /* libcrypto.dylib */; };
 		04A7F79C1120AFCF001DAEE8 /* DBPrefsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A7F79B1120AFCF001DAEE8 /* DBPrefsWindowController.m */; };
 		04A7F8891120B8AD001DAEE8 /* General.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A7F8881120B8AD001DAEE8 /* General.png */; };
 		04A7F9C111216EF4001DAEE8 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A7F9C011216EF4001DAEE8 /* Preferences.xib */; };
@@ -49,6 +52,7 @@
 		049C19651396793F00123E08 /* TestWhatSub.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestWhatSub.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		049C197713967D5E00123E08 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		049C197913967E5A00123E08 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		049C197E1396824700123E08 /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = usr/lib/libcrypto.dylib; sourceTree = SDKROOT; };
 		04A7F79A1120AFCF001DAEE8 /* DBPrefsWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBPrefsWindowController.h; sourceTree = "<group>"; };
 		04A7F79B1120AFCF001DAEE8 /* DBPrefsWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBPrefsWindowController.m; sourceTree = "<group>"; };
 		04A7F79D1120B00D001DAEE8 /* AppPreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppPreferencesController.h; sourceTree = "<group>"; };
@@ -86,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				049C197F1396824700123E08 /* libcrypto.dylib in Frameworks */,
 				049C197A13967E5A00123E08 /* SenTestingKit.framework in Frameworks */,
 				049C197813967D5E00123E08 /* Cocoa.framework in Frameworks */,
 			);
@@ -108,6 +113,7 @@
 		049C197B13967EB100123E08 /* Testing Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				049C197E1396824700123E08 /* libcrypto.dylib */,
 				049C197913967E5A00123E08 /* SenTestingKit.framework */,
 				049C197713967D5E00123E08 /* Cocoa.framework */,
 			);
@@ -372,6 +378,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				049C197D1396822200123E08 /* AppPreferences.m in Sources */,
+				049C197C139681EC00123E08 /* NapiProjektEngine.m in Sources */,
 				049C1976139679DF00123E08 /* TestNapiProjektEngine.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
