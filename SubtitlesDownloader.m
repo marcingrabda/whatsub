@@ -21,7 +21,7 @@
     return self;
 }
 
-- (void)download:(NSString*)pathToFile
+- (NSString*)download:(NSString*)pathToFile
 {
 	NSString* hash = nil;
 	NSData* fileData = [engine retrieveSubtitlesForMovieInPath:pathToFile hash:&hash];
@@ -46,14 +46,15 @@
 		[task waitUntilExit];
 		
 		NSString* subtitlesFileName = [p7zipOutputFilePath stringByDeletingPathExtension];
-		NSString* sourcePath = [subtitlesFileName stringByAppendingPathExtension:@"txt"];
-		NSString* workingDirectory = [pathToFile stringByDeletingPathExtension];
-		NSString* destinationPath = [workingDirectory stringByAppendingPathExtension:@"txt"];
-		
-		NSError* error;
-		NSFileManager* fileManager = [[NSFileManager alloc] init];
-		[fileManager copyItemAtPath:sourcePath toPath:destinationPath error:&error];
+		NSString* filePath = [subtitlesFileName stringByAppendingPathExtension:@"txt"];
+        return filePath;
 	}
+    else
+    {
+        NSString* reason = @"Corrupted subtitles file";
+        NSException* e = [NSException exceptionWithName:@"SubtitlesException" reason:reason userInfo:nil];
+        @throw e;
+    }
 }
 
 @end

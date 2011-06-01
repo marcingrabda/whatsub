@@ -13,8 +13,8 @@
 
 @interface FileHandler : NSObject {
 @private
-    NSArray* subtitlesFiles;
-    NSArray* movieFiles;
+    NSArray* subtitlesExtensions;
+    NSArray* movieExtensions;
 	SubtitlesConverter* converter;
 	SubtitlesDownloader* downloader;
     IBOutlet NSWindow* loadingWindow;

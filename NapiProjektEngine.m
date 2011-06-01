@@ -8,7 +8,7 @@
 
 #import "NapiProjektEngine.h"
 #import <openssl/md5.h>
-#import "AppUtil.h"
+#import "AppPreferences.h"
 
 @implementation NapiProjektEngine
 
@@ -56,9 +56,9 @@
 	/* TODO move to configuration file... */
 	NSString* urlFormatString = 
 		@"http://napiprojekt.pl/unit_napisy/dl.php?l=%@&f=%@&t=%@&v=other&kolejka=false&nick=%@&pass=%@";
-    NSString* langCode = [AppUtil getNPLanguageCode];
-	NSString* nickname = [AppUtil getNPUsername];
-	NSString* password = [AppUtil getNPPassword];
+    NSString* langCode = [AppPreferences getNPLanguageCode];
+	NSString* nickname = [AppPreferences getNPUsername];
+	NSString* password = [AppPreferences getNPPassword];
 	
 	return [NSString stringWithFormat:urlFormatString, langCode, hash, token, nickname, password];
 }

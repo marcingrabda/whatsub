@@ -9,7 +9,8 @@
 #import "SubtitlesConverter.h"
 #import "FrameRateCalculator.h"
 #import "RegexKitLite.h"
-#import "AppUtil.h"
+#import "AppPreferences.h"
+#import "AppController.h"
 
 @implementation SubtitlesConverter
 
@@ -17,7 +18,7 @@ NSString* const TMP_REGEX = @"^(\\d+):(\\d+):(\\d+):(.*)";
 NSString* const MDVD_REGEX = @"^\\{(\\d+)\\}\\{(\\d+)\\}(.*)";
 NSString* const MPL2_REGEX = @"^\\[(\\d+)\\]\\[(\\d+)\\](.*)";
 
-- (void)convert:(NSString*)pathToFile
+- (void)convert:(NSString*)pathToFile toFile:(NSString*)outputFilePath
 {	
 	NSLog(@"Processing file '%@'...", pathToFile);
 	NSArray* fileContents = [self readFile:pathToFile];
@@ -47,10 +48,8 @@ NSString* const MPL2_REGEX = @"^\\[(\\d+)\\]\\[(\\d+)\\](.*)";
     }
     
     if (subRipArray != nil)
-    {
-        //TODO check if the file exists
-        NSString* srtFilePath = [[pathToFile stringByDeletingPathExtension] stringByAppendingPathExtension:@"srt"];
-        [self printSubRip:subRipArray toFile:srtFilePath];
+    {        
+        [self printSubRip:subRipArray toFile:outputFilePath];
     }
 }
 
@@ -82,6 +81,7 @@ NSString* const MPL2_REGEX = @"^\\[(\\d+)\\]\\[(\\d+)\\](.*)";
             @throw e;
         }
     }
+    
     NSLog(@"Encoding guessed: %@", [NSString localizedNameOfStringEncoding:encoding]);
 	
 	// try LF first
@@ -205,7 +205,7 @@ NSString* const MPL2_REGEX = @"^\\[(\\d+)\\]\\[(\\d+)\\](.*)";
         [entireText appendString:linePrint];
     }
     
-    NSStringEncoding encoding = [AppUtil getOutputEncoding];
+    NSStringEncoding encoding = [AppPreferences getOutputEncoding];
     NSData *data = [entireText dataUsingEncoding:encoding allowLossyConversion:YES];
     [data writeToFile:srtFilePath atomically:YES];
 }

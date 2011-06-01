@@ -12,7 +12,7 @@
 @private
 }
 
-- (void)convert:(NSString*)pathToFile;
+- (void)convert:(NSString*)pathToFile toFile:(NSString*)outputFilePath;
 - (NSArray*)readFile:(NSString*)pathToFile;
 - (NSArray*)processTMPlayer:(NSArray*)lines;
 - (NSArray*)processMicroDVD:(NSArray*)lines forMovie:(NSString*)pathToFile;

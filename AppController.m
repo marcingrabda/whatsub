@@ -10,7 +10,7 @@
 #import "DropFileView.h"
 #import "AppPreferencesController.h"
 #import "FileHandler.h"
-#import "AppUtil.h"
+#import "AppPreferences.h"
 
 @implementation AppController
 
@@ -24,8 +24,8 @@ static AppController* instance = nil;
     if (self)
     {
         instance = self;
-        allowedFileTypes = [[AppUtil typeExtensionsForName:@"Movie"] arrayByAddingObjectsFromArray:
-                            [AppUtil typeExtensionsForName:@"Subtitles"]];
+        allowedFileTypes = [[AppPreferences typeExtensionsForName:@"Movie"] arrayByAddingObjectsFromArray:
+                            [AppPreferences typeExtensionsForName:@"Subtitles"]];
     }    
 	return self;
 }
@@ -63,9 +63,9 @@ static AppController* instance = nil;
     NSMutableArray* filteredFiles = [NSMutableArray new];
     NSMutableArray* updatedAllowedFileTypes  = [[NSMutableArray alloc] initWithArray:allowedFileTypes];
     
-    if (![AppUtil isSRTOnlyConversionAllowed])
+    if (![AppPreferences isSRTOnlyConversionAllowed])
     {
-        [updatedAllowedFileTypes removeObjectsInArray:[AppUtil typeExtensionsForName:@"Subtitles"]];
+        [updatedAllowedFileTypes removeObjectsInArray:[AppPreferences typeExtensionsForName:@"Subtitles"]];
     }
     
     for (NSString* file in files)

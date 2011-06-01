@@ -10,7 +10,7 @@
 #import "SubtitlesConverter.h"
 #import "SubtitlesDownloader.h"
 #import "AppController.h"
-#import "AppUtil.h"
+#import "AppPreferences.h"
 
 @implementation FileHandler
 
@@ -19,8 +19,8 @@
 	self = [super init];
     if (self)
     {
-        subtitlesFiles = [AppUtil typeExtensionsForName:@"Subtitles"];
-        movieFiles = [AppUtil typeExtensionsForName:@"Movie"];        
+        subtitlesExtensions = [AppPreferences typeExtensionsForName:@"Subtitles"];
+        movieExtensions = [AppPreferences typeExtensionsForName:@"Movie"];        
         converter = [[SubtitlesConverter alloc] init];
         downloader = [[SubtitlesDownloader alloc] init];
     }
@@ -64,13 +64,26 @@
 - (void)processFile:(NSString*)pathToFile
 {   
     NSString* extension = [pathToFile pathExtension];
-    if ([subtitlesFiles containsObject:extension])
+    if ([subtitlesExtensions containsObject:extension])
     {
-        [converter convert:pathToFile];
+        NSString* outputFilePath = [[pathToFile stringByDeletingPathExtension] stringByAppendingPathExtension:@"srt"];        
+        [converter convert:pathToFile toFile:outputFilePath];
     }
-    else if ([movieFiles containsObject:extension])
+    else if ([movieExtensions containsObject:extension])
     {
-        [downloader download:pathToFile];
+        NSString* outputFormat = [AppPreferences getOutputFormat];
+        NSString* downloadedFilePath = [downloader download:pathToFile];
+        if ([outputFormat isEqualToString:@"SRT"])
+        {
+            NSString* outputFilePath = [[pathToFile stringByDeletingPathExtension] stringByAppendingPathExtension:@"srt"];
+            [converter convert:downloadedFilePath toFile:outputFilePath];
+        }
+        else if ([outputFormat isEqualToString:@"TXT"])
+        {
+            NSString* outputFilePath = [[pathToFile stringByDeletingPathExtension] stringByAppendingPathExtension:@"txt"];
+            NSFileManager* fileManager = [NSFileManager new];
+            [fileManager copyItemAtPath:downloadedFilePath toPath:outputFilePath error:NULL];
+        }
     }
 }
 
