@@ -32,6 +32,21 @@ NSString* const MPL2_REGEX = @"^\\[(\\d+)\\]\\[(\\d+)\\](.*)";
     }
     else if ([[firstLine captureComponentsMatchedByRegex:MDVD_REGEX] count] > 0)
     {
+        if (moviePath == nil)
+        {
+            NSArray* movieExtensions = [AppPreferences typeExtensionsForName:@"Movie"];
+            NSString* partialPath = [pathToFile stringByDeletingPathExtension];
+            for (NSString* ext in movieExtensions)
+            {
+                NSString* path = [partialPath stringByAppendingPathExtension:ext];
+                if ([[NSFileManager defaultManager] fileExistsAtPath:path])
+                {
+                    NSLog(@"Movie file found at %@", path);
+                    moviePath = path;
+                    break;
+                }
+            }
+        }
         subRipArray = [self processMicroDVD:fileContents forMovie:moviePath];
     }
     else if ([[firstLine captureComponentsMatchedByRegex:MPL2_REGEX] count] > 0)
@@ -95,9 +110,8 @@ NSString* const MPL2_REGEX = @"^\\[(\\d+)\\]\\[(\\d+)\\](.*)";
 
 - (NSArray*)processMicroDVD:(NSArray *)lines forMovie:(NSString *)moviePath
 {
-    BOOL movieFileExists = [[NSFileManager defaultManager] fileExistsAtPath:moviePath];
     double framerate = 25.0;
-    if (movieFileExists)
+    if (moviePath != nil && [[NSFileManager defaultManager] fileExistsAtPath:moviePath])
     {
         framerate = [FrameRateCalculator calculateFrameRateForMovieInPath:moviePath];
     }

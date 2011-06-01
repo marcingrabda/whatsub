@@ -69,7 +69,7 @@
     if ([subtitlesExtensions containsObject:extension])
     {
         outputFilePath = [[pathToFile stringByDeletingPathExtension] stringByAppendingPathExtension:@"srt"];        
-        [converter convert:pathToFile toFile:outputFilePath forMovie:pathToFile];
+        [converter convert:pathToFile toFile:outputFilePath forMovie:nil];
     }
     else if ([movieExtensions containsObject:extension])
     {
@@ -83,7 +83,7 @@
         else if ([outputFormat isEqualToString:@"TXT"])
         {
             outputFilePath = [[pathToFile stringByDeletingPathExtension] stringByAppendingPathExtension:@"txt"];
-            [[NSFileManager new] copyItemAtPath:downloadedFilePath toPath:outputFilePath error:NULL];
+            [[NSFileManager defaultManager] copyItemAtPath:downloadedFilePath toPath:outputFilePath error:NULL];
         }
     }
     
