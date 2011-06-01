@@ -185,16 +185,32 @@ NSString* const MPL2_REGEX = @"^\\[(\\d+)\\]\\[(\\d+)\\](.*)";
             int second = [[capturesArray objectAtIndex:3] integerValue];
             
             int startTime = hour * 3600 + minute * 60 + second;
-            int endTime = startTime + 60;
+            int endTime = startTime + 5;
             
             NSString* text = [capturesArray objectAtIndex:4];
-            NSArray* singleLineArray = [NSArray arrayWithObjects:
+            NSMutableArray* singleLineArray = [NSMutableArray arrayWithObjects:
                                         [NSNumber numberWithInteger:startTime],
                                         [NSNumber numberWithInteger:endTime], 
                                         text, nil];
             [outputArray addObject:singleLineArray];
-        }   
+        }
 	}
+    
+    NSMutableArray* previousLineArray = nil;
+    int previousEndTime = 0;
+    for (NSMutableArray* singleLineArray in outputArray)
+    {
+        int startTime = [[singleLineArray objectAtIndex:0] integerValue];
+        int endTime = [[singleLineArray objectAtIndex:1] integerValue];
+        
+        if (previousEndTime > startTime)
+        {
+            [previousLineArray replaceObjectAtIndex:1 withObject:[NSNumber numberWithInteger:startTime]];
+        }
+        
+        previousLineArray = singleLineArray;
+        previousEndTime = endTime;
+    }
     
     return outputArray;
 }
