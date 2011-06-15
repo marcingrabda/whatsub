@@ -1,0 +1,5 @@
+WhatSub
+
+WhatSub is a subtitles downloader and converter. It downloads subtitles from the www.napiprojekt.pl web page. It has the ability to convert subtitles from TMPlayer, MicroDVD and MPL2 formats to widely supported SubRip (.srt) format.
+
+It is a Mac OS X application written purely in Obj-C.
