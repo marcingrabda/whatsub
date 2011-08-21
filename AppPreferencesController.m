@@ -14,6 +14,7 @@
 {
 	[self addView:generalPrefsView label:@"General"];
 	[self addView:accountPrefsView label:@"Napiprojekt"];
+    [self addView:updatePrefsView label:@"Auto Update"];
 }
 
 @end

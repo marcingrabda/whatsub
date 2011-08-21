@@ -1,0 +1,12 @@
+features:
+* FIX for output encoding handling
+* closing app after processing subtitles
+* integrate with Sparkle framework (automatic updates)
+* archive old subtitles file if exists
+
+bugs:
+* FIX the issue reported recently on myapple
+* FIX for the Lost Room movie
+
+FUTURE:
+* opensubtitles.org support

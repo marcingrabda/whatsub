@@ -4,6 +4,12 @@
 <dict>
 	<key>AllowSRTOnlyConversion</key>
 	<true/>
+	<key>ArchiveIfFileExists</key>
+	<true/>
+	<key>CloseAppAfterProcessing</key>
+	<true/>
+	<key>CheckForUpdatesAutomatically</key>
+	<true/>
 	<key>NPLanguage</key>
 	<string>Polish</string>
 	<key>NPPassword</key>

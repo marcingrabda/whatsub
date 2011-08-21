@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		04115B390FB6F6C9005E5F74 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04115B380FB6F6C9005E5F74 /* AppController.m */; };
+		0453C5DA13F31C0C00150391 /* TODO in Resources */ = {isa = PBXBuildFile; fileRef = 0453C5D913F31C0C00150391 /* TODO */; };
 		0465473D0FB4319100D9E8FA /* DropFileView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0465473C0FB4319100D9E8FA /* DropFileView.m */; };
 		0471C884124AB368001A567D /* FileHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 0471C883124AB368001A567D /* FileHandler.m */; };
 		0481167C1370B85C00A775F8 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0481167B1370B85C00A775F8 /* libicucore.dylib */; };
@@ -28,6 +29,7 @@
 		04AFD19513702BBB00AFE116 /* SubtitlesDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AFD19413702BBB00AFE116 /* SubtitlesDownloader.m */; };
 		04C34A691110C8930080BDEB /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C34A681110C8930080BDEB /* RegexKitLite.m */; };
 		04C34C8111123FEB0080BDEB /* NapiProjektEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C34C8011123FEB0080BDEB /* NapiProjektEngine.m */; };
+		04C54B5C13FFF6D0009EE954 /* Auto Update.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04C54B5B13FFF6D0009EE954 /* Auto Update.tiff */; };
 		04D04000110F6DB1005DA3B0 /* SubtitlesConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D03FFF110F6DB1005DA3B0 /* SubtitlesConverter.m */; };
 		04EBB4FD1371B6E500CC15DF /* AppPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBB4FC1371B6E400CC15DF /* AppPreferences.m */; };
 		04F72E38126F68BC007C0205 /* AppPreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F72E37126F68BC007C0205 /* AppPreferencesController.m */; };
@@ -41,6 +43,7 @@
 /* Begin PBXFileReference section */
 		04115B370FB6F6C9005E5F74 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
 		04115B380FB6F6C9005E5F74 /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AppController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		0453C5D913F31C0C00150391 /* TODO */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO; sourceTree = "<group>"; };
 		0465473B0FB4319100D9E8FA /* DropFileView.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; path = DropFileView.h; sourceTree = "<group>"; };
 		0465473C0FB4319100D9E8FA /* DropFileView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropFileView.m; sourceTree = "<group>"; };
 		0471C882124AB368001A567D /* FileHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileHandler.h; sourceTree = "<group>"; };
@@ -68,6 +71,7 @@
 		04C34A681110C8930080BDEB /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
 		04C34C7F11123FEB0080BDEB /* NapiProjektEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NapiProjektEngine.h; sourceTree = "<group>"; };
 		04C34C8011123FEB0080BDEB /* NapiProjektEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NapiProjektEngine.m; sourceTree = "<group>"; };
+		04C54B5B13FFF6D0009EE954 /* Auto Update.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "Auto Update.tiff"; sourceTree = "<group>"; };
 		04D03FFE110F6DB1005DA3B0 /* SubtitlesConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubtitlesConverter.h; sourceTree = "<group>"; };
 		04D03FFF110F6DB1005DA3B0 /* SubtitlesConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubtitlesConverter.m; sourceTree = "<group>"; };
 		04EBB4FB1371B6E400CC15DF /* AppPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AppPreferences.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -247,6 +251,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				04C54B5B13FFF6D0009EE954 /* Auto Update.tiff */,
 				04A7C5F61396F27A009849B2 /* WhatSub.icns */,
 				04A7F9DF11217A02001DAEE8 /* Napiprojekt.png */,
 				04A7F8881120B8AD001DAEE8 /* General.png */,
@@ -255,6 +260,7 @@
 				8D1107310486CEB800E47090 /* Info.plist */,
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
 				04A7F9C011216EF4001DAEE8 /* Preferences.xib */,
+				0453C5D913F31C0C00150391 /* TODO */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -356,6 +362,8 @@
 				04A7F9E011217A02001DAEE8 /* Napiprojekt.png in Resources */,
 				04F72EF8126F759D007C0205 /* Defaults.plist in Resources */,
 				04A7C5F71396F27A009849B2 /* WhatSub.icns in Resources */,
+				0453C5DA13F31C0C00150391 /* TODO in Resources */,
+				04C54B5C13FFF6D0009EE954 /* Auto Update.tiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

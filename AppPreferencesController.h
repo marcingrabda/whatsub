@@ -13,6 +13,7 @@
 @private
 	IBOutlet NSView* generalPrefsView;
 	IBOutlet NSView* accountPrefsView;
+    IBOutlet NSView* updatePrefsView;
 }
 
 @end
