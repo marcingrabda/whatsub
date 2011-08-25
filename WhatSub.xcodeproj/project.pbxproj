@@ -32,6 +32,8 @@
 		04C34C8111123FEB0080BDEB /* NapiProjektEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C34C8011123FEB0080BDEB /* NapiProjektEngine.m */; };
 		04C54B5C13FFF6D0009EE954 /* Auto Update.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04C54B5B13FFF6D0009EE954 /* Auto Update.tiff */; };
 		04D04000110F6DB1005DA3B0 /* SubtitlesConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D03FFF110F6DB1005DA3B0 /* SubtitlesConverter.m */; };
+		04E1C2601406EB7700BA2B97 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E1C25F1406EB7700BA2B97 /* Sparkle.framework */; };
+		04E1C2611406EB8A00BA2B97 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 04E1C25F1406EB7700BA2B97 /* Sparkle.framework */; };
 		04EBB4FD1371B6E500CC15DF /* AppPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBB4FC1371B6E400CC15DF /* AppPreferences.m */; };
 		04F72E38126F68BC007C0205 /* AppPreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F72E37126F68BC007C0205 /* AppPreferencesController.m */; };
 		04F72EF8126F759D007C0205 /* Defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04F72EF7126F759D007C0205 /* Defaults.plist */; };
@@ -40,6 +42,19 @@
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		04E1C25A1406EAE000BA2B97 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				04E1C2611406EB8A00BA2B97 /* Sparkle.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		04115B370FB6F6C9005E5F74 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
@@ -65,7 +80,7 @@
 		04A7F8791120B7F6001DAEE8 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/Preferences.xib; sourceTree = "<group>"; };
 		04A7F8881120B8AD001DAEE8 /* General.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = General.png; sourceTree = "<group>"; };
 		04A7F9DF11217A02001DAEE8 /* Napiprojekt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Napiprojekt.png; sourceTree = "<group>"; };
-		04AC7D071406DCDA00FCF14F /* FileArchiver.h */ = {isa = PBXFileReference; fileEncoding = 4; path = FileArchiver.h; sourceTree = "<group>"; };
+		04AC7D071406DCDA00FCF14F /* FileArchiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileArchiver.h; sourceTree = "<group>"; };
 		04AC7D081406DCDA00FCF14F /* FileArchiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileArchiver.m; sourceTree = "<group>"; };
 		04AF2E90111F6C1000EF0D5C /* 7za */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = 7za; sourceTree = "<group>"; };
 		04AFD19313702BBB00AFE116 /* SubtitlesDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubtitlesDownloader.h; sourceTree = "<group>"; };
@@ -77,6 +92,7 @@
 		04C54B5B13FFF6D0009EE954 /* Auto Update.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "Auto Update.tiff"; sourceTree = "<group>"; };
 		04D03FFE110F6DB1005DA3B0 /* SubtitlesConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubtitlesConverter.h; sourceTree = "<group>"; };
 		04D03FFF110F6DB1005DA3B0 /* SubtitlesConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubtitlesConverter.m; sourceTree = "<group>"; };
+		04E1C25F1406EB7700BA2B97 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		04EBB4FB1371B6E400CC15DF /* AppPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AppPreferences.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		04EBB4FC1371B6E400CC15DF /* AppPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AppPreferences.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		04F72E37126F68BC007C0205 /* AppPreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppPreferencesController.m; sourceTree = "<group>"; };
@@ -113,6 +129,7 @@
 				0481167C1370B85C00A775F8 /* libicucore.dylib in Frameworks */,
 				0481167E1370B86400A775F8 /* QTKit.framework in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				04E1C2601406EB7700BA2B97 /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +290,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				04E1C25F1406EB7700BA2B97 /* Sparkle.framework */,
 				049C197B13967EB100123E08 /* Testing Frameworks */,
 				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
@@ -308,6 +326,7 @@
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
+				04E1C25A1406EAE000BA2B97 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -504,6 +523,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/Frameworks\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -527,6 +548,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/Frameworks\"",
 				);
 				GCC_ENABLE_OBJC_GC = required;
 				GCC_MODEL_TUNING = G5;
