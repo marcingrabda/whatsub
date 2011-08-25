@@ -35,7 +35,7 @@
 		04E1C2601406EB7700BA2B97 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E1C25F1406EB7700BA2B97 /* Sparkle.framework */; };
 		04E1C2611406EB8A00BA2B97 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 04E1C25F1406EB7700BA2B97 /* Sparkle.framework */; };
 		04E1C2631406EF7500BA2B97 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 04E1C2621406EF7500BA2B97 /* README */; };
-		04E1C2691406F29B00BA2B97 /* appcast.xml in Resources */ = {isa = PBXBuildFile; fileRef = 04E1C2681406F29B00BA2B97 /* appcast.xml */; };
+		04E1C2691406F29B00BA2B97 /* WhatSub_appcast.xml in Resources */ = {isa = PBXBuildFile; fileRef = 04E1C2681406F29B00BA2B97 /* WhatSub_appcast.xml */; };
 		04EBB4FD1371B6E500CC15DF /* AppPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBB4FC1371B6E400CC15DF /* AppPreferences.m */; };
 		04F72E38126F68BC007C0205 /* AppPreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F72E37126F68BC007C0205 /* AppPreferencesController.m */; };
 		04F72EF8126F759D007C0205 /* Defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04F72EF7126F759D007C0205 /* Defaults.plist */; };
@@ -96,7 +96,7 @@
 		04D03FFF110F6DB1005DA3B0 /* SubtitlesConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubtitlesConverter.m; sourceTree = "<group>"; };
 		04E1C25F1406EB7700BA2B97 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		04E1C2621406EF7500BA2B97 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
-		04E1C2681406F29B00BA2B97 /* appcast.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = appcast.xml; sourceTree = "<group>"; };
+		04E1C2681406F29B00BA2B97 /* WhatSub_appcast.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = WhatSub_appcast.xml; sourceTree = "<group>"; };
 		04EBB4FB1371B6E400CC15DF /* AppPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AppPreferences.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		04EBB4FC1371B6E400CC15DF /* AppPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AppPreferences.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		04F72E37126F68BC007C0205 /* AppPreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppPreferencesController.m; sourceTree = "<group>"; };
@@ -286,7 +286,7 @@
 				8D1107310486CEB800E47090 /* Info.plist */,
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
 				04A7F9C011216EF4001DAEE8 /* Preferences.xib */,
-				04E1C2681406F29B00BA2B97 /* appcast.xml */,
+				04E1C2681406F29B00BA2B97 /* WhatSub_appcast.xml */,
 				04E1C2621406EF7500BA2B97 /* README */,
 				0453C5D913F31C0C00150391 /* TODO */,
 			);
@@ -395,7 +395,7 @@
 				0453C5DA13F31C0C00150391 /* TODO in Resources */,
 				04C54B5C13FFF6D0009EE954 /* Auto Update.tiff in Resources */,
 				04E1C2631406EF7500BA2B97 /* README in Resources */,
-				04E1C2691406F29B00BA2B97 /* appcast.xml in Resources */,
+				04E1C2691406F29B00BA2B97 /* WhatSub_appcast.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
