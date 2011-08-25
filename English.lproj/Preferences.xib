@@ -650,7 +650,7 @@
 				<reference key="NSNextKeyView" ref="474202998"/>
 				<string key="NSClassName">NSView</string>
 			</object>
-			<object class="NSCustomObject" id="141814800">
+			<object class="NSCustomObject" id="617526419">
 				<string key="NSClassName">SUUpdater</string>
 			</object>
 		</object>
@@ -858,28 +858,28 @@
 					<int key="connectionID">316</int>
 				</object>
 				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">checkForUpdates:</string>
+						<reference key="source" ref="617526419"/>
+						<reference key="destination" ref="413156462"/>
+					</object>
+					<int key="connectionID">322</int>
+				</object>
+				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: values.CheckForUpdatesAutomatically</string>
+						<string key="label">value: values.SUEnableAutomaticChecks</string>
 						<reference key="source" ref="474202998"/>
 						<reference key="destination" ref="543911"/>
 						<object class="NSNibBindingConnector" key="connector">
 							<reference key="NSSource" ref="474202998"/>
 							<reference key="NSDestination" ref="543911"/>
-							<string key="NSLabel">value: values.CheckForUpdatesAutomatically</string>
+							<string key="NSLabel">value: values.SUEnableAutomaticChecks</string>
 							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">values.CheckForUpdatesAutomatically</string>
+							<string key="NSKeyPath">values.SUEnableAutomaticChecks</string>
 							<int key="NSNibBindingConnectorVersion">2</int>
 						</object>
 					</object>
-					<int key="connectionID">320</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">checkForUpdates:</string>
-						<reference key="source" ref="141814800"/>
-						<reference key="destination" ref="413156462"/>
-					</object>
-					<int key="connectionID">322</int>
+					<int key="connectionID">324</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -1290,7 +1290,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">321</int>
-						<reference key="object" ref="141814800"/>
+						<reference key="object" ref="617526419"/>
 						<reference key="parent" ref="0"/>
 					</object>
 				</object>
@@ -1434,7 +1434,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">322</int>
+			<int key="maxID">324</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
