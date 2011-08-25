@@ -11,12 +11,12 @@
 
 @implementation SubtitlesDownloader
 
-- (id)init
+- (id)initWithEngine:(NapiProjektEngine*)napiProjektEngine
 {	
 	self = [super init];
 	if (self)
     {
-        engine = [[NapiProjektEngine alloc] init];
+        engine = napiProjektEngine;
     }
     return self;
 }

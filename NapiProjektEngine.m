@@ -8,9 +8,20 @@
 
 #import "NapiProjektEngine.h"
 #import <openssl/md5.h>
-#import "AppPreferences.h"
 
 @implementation NapiProjektEngine
+
+- (id)initWithUser:(NSString*)username password:(NSString*)password language:(NSString*)langCode
+{	
+	self = [super init];
+    if (self)
+    {
+        user = username;
+        pass = password;
+        lang = langCode;
+    }
+    return self;
+}
 
 - (NSData*)retrieveSubtitlesForMovieInPath:(NSString*)moviePath hash:(NSString**)hashPtr
 {
@@ -53,14 +64,10 @@
 
 - (NSString*)getURLForHash:(NSString*)hash token:(NSString*)token
 {	
-	/* TODO move to configuration file... */
 	NSString* urlFormatString = 
 		@"http://napiprojekt.pl/unit_napisy/dl.php?l=%@&f=%@&t=%@&v=other&kolejka=false&nick=%@&pass=%@";
-    NSString* langCode = [AppPreferences getNPLanguageCode];
-	NSString* nickname = [AppPreferences getNPUsername];
-	NSString* password = [AppPreferences getNPPassword];
 	
-	return [NSString stringWithFormat:urlFormatString, langCode, hash, token, nickname, password];
+	return [NSString stringWithFormat:urlFormatString, lang, hash, token, user, pass];
 }
 
 - (NSString*)npFDigest:(NSString*)input

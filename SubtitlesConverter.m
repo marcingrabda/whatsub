@@ -9,7 +9,6 @@
 #import "SubtitlesConverter.h"
 #import "FrameRateCalculator.h"
 #import "RegexKitLite.h"
-#import "AppPreferences.h"
 #import "AppController.h"
 
 @implementation SubtitlesConverter
@@ -18,10 +17,20 @@ NSString* const TMP_REGEX = @"^(\\d+):(\\d+):(\\d+):(.*)";
 NSString* const MDVD_REGEX = @"^\\{(\\d+)\\}\\{(\\d+)\\}(.*)";
 NSString* const MPL2_REGEX = @"^\\[(\\d+)\\]\\[(\\d+)\\](.*)";
 
-- (void)convert:(NSString*)pathToFile toFile:(NSString*)outputFilePath forMovie:(NSString*)moviePath
+- (id)initWithSupportedMovieExtensions:(NSArray*)extensions
 {	
-	NSLog(@"Processing file %@", pathToFile);
-	NSArray* fileContents = [self readFile:pathToFile];
+	self = [super init];
+    if (self)
+    {
+        movieExtensions = extensions;
+    }
+    return self;
+}
+
+- (void)convert:(NSString*)inputPath toFile:(NSString*)outputPath forMovie:(NSString*)moviePath withEncoding:(NSStringEncoding)encoding
+{	
+	NSLog(@"Processing file %@", inputPath);
+	NSArray* fileContents = [self readFile:inputPath];
     
 	NSString* firstLine = [fileContents objectAtIndex:0];
     NSArray* subRipArray = nil;
@@ -34,8 +43,7 @@ NSString* const MPL2_REGEX = @"^\\[(\\d+)\\]\\[(\\d+)\\](.*)";
     {
         if (moviePath == nil)
         {
-            NSArray* movieExtensions = [AppPreferences typeExtensionsForName:@"Movie"];
-            NSString* partialPath = [pathToFile stringByDeletingPathExtension];
+            NSString* partialPath = [inputPath stringByDeletingPathExtension];
             for (NSString* ext in movieExtensions)
             {
                 NSString* path = [partialPath stringByAppendingPathExtension:ext];
@@ -62,8 +70,24 @@ NSString* const MPL2_REGEX = @"^\\[(\\d+)\\]\\[(\\d+)\\](.*)";
     
     if (subRipArray != nil)
     {        
-        [self printSubRip:subRipArray toFile:outputFilePath];
+        [self printSubRip:subRipArray toFile:outputPath withEncoding:encoding];
     }
+}
+
+- (void)convertWithoutProcessing:(NSString*)inputPath toFile:(NSString*)outputPath withEncoding:(NSStringEncoding)encoding
+{	
+	NSLog(@"Converting file %@", inputPath);
+	NSArray* fileContents = [self readFile:inputPath];
+    
+    NSMutableString* entireText = [NSMutableString string];
+    for (NSArray* line in fileContents)
+    {
+        NSString* linePrint = [NSString stringWithFormat:@"%@\n", line, nil];
+        [entireText appendString:linePrint];
+    }
+    
+    NSData *data = [entireText dataUsingEncoding:encoding allowLossyConversion:YES];
+    [data writeToFile:outputPath atomically:YES];
 }
 
 - (NSArray*)readFile:(NSString*)pathToFile
@@ -215,7 +239,7 @@ NSString* const MPL2_REGEX = @"^\\[(\\d+)\\]\\[(\\d+)\\](.*)";
     return outputArray;
 }
 
-- (void)printSubRip:(NSArray *)input toFile:(NSString *)srtFilePath
+- (void)printSubRip:(NSArray *)input toFile:(NSString *)srtFilePath withEncoding:(NSStringEncoding)encoding
 {
     NSMutableString* entireText = [NSMutableString string];
     int lineNumber = 1;
@@ -233,7 +257,6 @@ NSString* const MPL2_REGEX = @"^\\[(\\d+)\\]\\[(\\d+)\\](.*)";
         [entireText appendString:linePrint];
     }
     
-    NSStringEncoding encoding = [AppPreferences getOutputEncoding];
     NSData *data = [entireText dataUsingEncoding:encoding allowLossyConversion:YES];
     [data writeToFile:srtFilePath atomically:YES];
 }

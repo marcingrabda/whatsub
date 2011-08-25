@@ -15,6 +15,7 @@
 	NapiProjektEngine* engine;
 }
 
+- (id)initWithEngine:(NapiProjektEngine*)napiProjektEngine;
 - (NSString*)download:(NSString*)pathToFile;
 
 @end

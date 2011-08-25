@@ -20,5 +20,7 @@
 + (NSString*)getOutputFormat;
 + (NSStringEncoding)getOutputEncoding;
 + (BOOL)isSRTOnlyConversionAllowed;
++ (BOOL)isClosingAppAfterProcessingEnabled;
++ (BOOL)isArchivingIfFileExistsEnabled;
 
 @end

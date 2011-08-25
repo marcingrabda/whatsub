@@ -76,10 +76,25 @@
     return [encodingNumber unsignedIntegerValue];
 }
 
++ (BOOL)getWrappedBooleanForKey:(NSString*)key
+{
+    NSNumber* wrappedBool = [[NSUserDefaults standardUserDefaults] valueForKey:key];
+    return [wrappedBool boolValue];
+}
+
 + (BOOL)isSRTOnlyConversionAllowed
 {
-    NSNumber* wrappedBool = [[NSUserDefaults standardUserDefaults] valueForKey:@"AllowSRTOnlyConversion"];
-    return [wrappedBool boolValue];
+    return [self getWrappedBooleanForKey:@"AllowSRTOnlyConversion"];
+}
+
++ (BOOL)isClosingAppAfterProcessingEnabled
+{
+    return [self getWrappedBooleanForKey:@"CloseAppAfterProcessing"];
+}
+
++ (BOOL)isArchivingIfFileExistsEnabled
+{
+    return [self getWrappedBooleanForKey:@"ArchiveIfFileExists"];
 }
 
 @end

@@ -25,6 +25,7 @@
 		04A7F8891120B8AD001DAEE8 /* General.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A7F8881120B8AD001DAEE8 /* General.png */; };
 		04A7F9C111216EF4001DAEE8 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A7F9C011216EF4001DAEE8 /* Preferences.xib */; };
 		04A7F9E011217A02001DAEE8 /* Napiprojekt.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A7F9DF11217A02001DAEE8 /* Napiprojekt.png */; };
+		04AC7D091406DCDA00FCF14F /* FileArchiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AC7D081406DCDA00FCF14F /* FileArchiver.m */; };
 		04AF2E91111F6C1000EF0D5C /* 7za in Resources */ = {isa = PBXBuildFile; fileRef = 04AF2E90111F6C1000EF0D5C /* 7za */; };
 		04AFD19513702BBB00AFE116 /* SubtitlesDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AFD19413702BBB00AFE116 /* SubtitlesDownloader.m */; };
 		04C34A691110C8930080BDEB /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C34A681110C8930080BDEB /* RegexKitLite.m */; };
@@ -64,6 +65,8 @@
 		04A7F8791120B7F6001DAEE8 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/Preferences.xib; sourceTree = "<group>"; };
 		04A7F8881120B8AD001DAEE8 /* General.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = General.png; sourceTree = "<group>"; };
 		04A7F9DF11217A02001DAEE8 /* Napiprojekt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Napiprojekt.png; sourceTree = "<group>"; };
+		04AC7D071406DCDA00FCF14F /* FileArchiver.h */ = {isa = PBXFileReference; fileEncoding = 4; path = FileArchiver.h; sourceTree = "<group>"; };
+		04AC7D081406DCDA00FCF14F /* FileArchiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileArchiver.m; sourceTree = "<group>"; };
 		04AF2E90111F6C1000EF0D5C /* 7za */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = 7za; sourceTree = "<group>"; };
 		04AFD19313702BBB00AFE116 /* SubtitlesDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubtitlesDownloader.h; sourceTree = "<group>"; };
 		04AFD19413702BBB00AFE116 /* SubtitlesDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubtitlesDownloader.m; sourceTree = "<group>"; };
@@ -175,6 +178,8 @@
 				04F9315F0FB8579E003FFCB3 /* FrameRateCalculator.m */,
 				04EBB4FB1371B6E400CC15DF /* AppPreferences.h */,
 				04EBB4FC1371B6E400CC15DF /* AppPreferences.m */,
+				04AC7D071406DCDA00FCF14F /* FileArchiver.h */,
+				04AC7D081406DCDA00FCF14F /* FileArchiver.m */,
 			);
 			name = Helper;
 			sourceTree = "<group>";
@@ -412,6 +417,7 @@
 				04F72E38126F68BC007C0205 /* AppPreferencesController.m in Sources */,
 				04AFD19513702BBB00AFE116 /* SubtitlesDownloader.m in Sources */,
 				04EBB4FD1371B6E500CC15DF /* AppPreferences.m in Sources */,
+				04AC7D091406DCDA00FCF14F /* FileArchiver.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

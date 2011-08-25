@@ -90,7 +90,7 @@
 					<object class="NSButton" id="867509057">
 						<reference key="NSNextResponder" ref="320408150"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{59, 40}, {237, 18}}</string>
+						<string key="NSFrame">{{59, 40}, {306, 18}}</string>
 						<reference key="NSSuperview" ref="320408150"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="695822693"/>
@@ -98,7 +98,7 @@
 						<object class="NSButtonCell" key="NSCell" id="770495974">
 							<int key="NSCellFlags">-2080244224</int>
 							<int key="NSCellFlags2">0</int>
-							<string key="NSContents">Close application after processing</string>
+							<string key="NSContents">Close application after successful processing</string>
 							<reference key="NSSupport" ref="849055045"/>
 							<reference key="NSControlView" ref="867509057"/>
 							<int key="NSButtonFlags">1211912703</int>

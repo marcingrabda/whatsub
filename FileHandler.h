@@ -10,13 +10,12 @@
 
 @class SubtitlesConverter;
 @class SubtitlesDownloader;
+@class NapiProjektEngine;
 
 @interface FileHandler : NSObject {
 @private
     NSArray* subtitlesExtensions;
     NSArray* movieExtensions;
-	SubtitlesConverter* converter;
-	SubtitlesDownloader* downloader;
     IBOutlet NSWindow* loadingWindow;
     IBOutlet NSProgressIndicator* progressIndicator;
 }

@@ -1,9 +1,9 @@
 features:
-* FIX for output encoding handling
-* remove direct calls to AppPreferences
-* closing app after processing subtitles
+* FIX for output encoding handling - DONE
+* remove direct calls to AppPreferences - DONE
+* closing app after processing subtitles - DONE
 * integrate with Sparkle framework (automatic updates)
-* archive old subtitles file if exists
+* archive old subtitles file if exists - DONE
 
 bugs:
 * FIX the issue reported recently on myapple
