@@ -1,5 +1,6 @@
 features:
 * FIX for output encoding handling
+* remove direct calls to AppPreferences
 * closing app after processing subtitles
 * integrate with Sparkle framework (automatic updates)
 * archive old subtitles file if exists
