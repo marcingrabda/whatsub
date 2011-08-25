@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"  xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel>
+        <title></title>
+        <link>https://raw.github.com/burningtomato/whatsub/master/appcast.xml</link>
+        <description>Most recent changes with links to updates.</description>
+        <language>en</language>
+        <item>
+            <title>Version 1.0</title>
+            <pubDate>Wed, 15 Jun 2011 20:00:00 +0000</pubDate>
+            <enclosure url="http://cloud.github.com/downloads/burningtomato/whatsub/WhatSub-1.0.zip" sparkle:version="1.5b6" length="2864" type="application/octet-stream"/>
+        </item>
+        <item>
+            <title>Version 1.1</title>
+            <pubDate>Fri, 26 Aug 2011 00:00:00 +0000</pubDate>
+            <enclosure url="http://cloud.github.com/downloads/burningtomato/whatsub/WhatSub-1.1.zip" sparkle:version="1.5b6" length="2864" type="application/octet-stream"/>
+        </item>
+    </channel>
+</rss>
