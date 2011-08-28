@@ -19,6 +19,7 @@
 + (NSString*)getNPLanguageCode;
 + (NSString*)getOutputFormat;
 + (NSStringEncoding)getOutputEncoding;
++ (NSNumber*)getDefaultFrameRate;
 + (BOOL)isSRTOnlyConversionAllowed;
 + (BOOL)isClosingAppAfterProcessingEnabled;
 + (BOOL)isArchivingIfFileExistsEnabled;

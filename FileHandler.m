@@ -74,8 +74,10 @@
     NSString* outputFilePath = nil;
     NSString* extension = [pathToFile pathExtension];
     NSStringEncoding outputEncoding = [AppPreferences getOutputEncoding];
+    NSNumber* defaultFrameRate = [AppPreferences getDefaultFrameRate];
     BOOL archive = [AppPreferences isArchivingIfFileExistsEnabled];
-    SubtitlesConverter* converter = [[SubtitlesConverter alloc] initWithSupportedMovieExtensions:movieExtensions];
+    SubtitlesConverter* converter = [[SubtitlesConverter alloc] initWithSupportedMovieExtensions:movieExtensions 
+                                                                             andDefaultFrameRate:defaultFrameRate];
     FileArchiver* archiver = [[FileArchiver alloc] init];
     
     if ([subtitlesExtensions containsObject:extension])

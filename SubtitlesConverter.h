@@ -11,9 +11,10 @@
 @interface SubtitlesConverter : NSObject {
 @private
     NSArray* movieExtensions;
+    NSNumber* defaultFrameRate;
 }
 
-- (id)initWithSupportedMovieExtensions:(NSArray*)extensions;
+- (id)initWithSupportedMovieExtensions:(NSArray*)extensions andDefaultFrameRate:(NSNumber*)frameRate;
 - (void)convert:(NSString*)input toFile:(NSString*)output forMovie:(NSString*)movie withEncoding:(NSStringEncoding)encoding;
 - (void)convertWithoutProcessing:(NSString*)input toFile:(NSString*)output withEncoding:(NSStringEncoding)encoding;
 - (NSArray*)readFile:(NSString*)pathToFile;

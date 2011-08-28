@@ -6,9 +6,9 @@
 	<true/>
 	<key>ArchiveIfFileExists</key>
 	<true/>
-	<key>CloseAppAfterProcessing</key>
-	<true/>
 	<key>CheckForUpdatesAutomatically</key>
+	<true/>
+	<key>CloseAppAfterProcessing</key>
 	<true/>
 	<key>NPLanguage</key>
 	<string>Polish</string>
@@ -20,5 +20,7 @@
 	<string>UTF-8</string>
 	<key>OutputFormat</key>
 	<string>TXT</string>
+	<key>DefaultFrameRate</key>
+	<integer>24</integer>
 </dict>
 </plist>

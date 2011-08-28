@@ -17,12 +17,13 @@ NSString* const TMP_REGEX = @"^(\\d+):(\\d+):(\\d+):(.*)";
 NSString* const MDVD_REGEX = @"^\\{(\\d+)\\}\\{(\\d+)\\}(.*)";
 NSString* const MPL2_REGEX = @"^\\[(\\d+)\\]\\[(\\d+)\\](.*)";
 
-- (id)initWithSupportedMovieExtensions:(NSArray*)extensions
+- (id)initWithSupportedMovieExtensions:(NSArray*)extensions andDefaultFrameRate:(NSNumber*)frameRate
 {	
 	self = [super init];
     if (self)
     {
         movieExtensions = extensions;
+        defaultFrameRate = frameRate;
     }
     return self;
 }
@@ -134,7 +135,7 @@ NSString* const MPL2_REGEX = @"^\\[(\\d+)\\]\\[(\\d+)\\](.*)";
 
 - (NSArray*)processMicroDVD:(NSArray *)lines forMovie:(NSString *)moviePath
 {
-    double framerate = 25.0;
+    double framerate = [defaultFrameRate doubleValue];
     if (moviePath != nil && [[NSFileManager defaultManager] fileExistsAtPath:moviePath])
     {
         framerate = [FrameRateCalculator calculateFrameRateForMovieInPath:moviePath];

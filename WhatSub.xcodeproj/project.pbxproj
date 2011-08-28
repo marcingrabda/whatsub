@@ -28,11 +28,11 @@
 		04AC7D091406DCDA00FCF14F /* FileArchiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AC7D081406DCDA00FCF14F /* FileArchiver.m */; };
 		04AF2E91111F6C1000EF0D5C /* 7za in Resources */ = {isa = PBXBuildFile; fileRef = 04AF2E90111F6C1000EF0D5C /* 7za */; };
 		04AFD19513702BBB00AFE116 /* SubtitlesDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AFD19413702BBB00AFE116 /* SubtitlesDownloader.m */; };
+		04C02541140A610B00656AD9 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E1C25F1406EB7700BA2B97 /* Sparkle.framework */; };
 		04C34A691110C8930080BDEB /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C34A681110C8930080BDEB /* RegexKitLite.m */; };
 		04C34C8111123FEB0080BDEB /* NapiProjektEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C34C8011123FEB0080BDEB /* NapiProjektEngine.m */; };
 		04C54B5C13FFF6D0009EE954 /* Auto Update.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04C54B5B13FFF6D0009EE954 /* Auto Update.tiff */; };
 		04D04000110F6DB1005DA3B0 /* SubtitlesConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D03FFF110F6DB1005DA3B0 /* SubtitlesConverter.m */; };
-		04E1C2601406EB7700BA2B97 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E1C25F1406EB7700BA2B97 /* Sparkle.framework */; };
 		04E1C2611406EB8A00BA2B97 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 04E1C25F1406EB7700BA2B97 /* Sparkle.framework */; };
 		04E1C2631406EF7500BA2B97 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 04E1C2621406EF7500BA2B97 /* README */; };
 		04E1C2691406F29B00BA2B97 /* WhatSub_appcast.xml in Resources */ = {isa = PBXBuildFile; fileRef = 04E1C2681406F29B00BA2B97 /* WhatSub_appcast.xml */; };
@@ -133,7 +133,7 @@
 				0481167C1370B85C00A775F8 /* libicucore.dylib in Frameworks */,
 				0481167E1370B86400A775F8 /* QTKit.framework in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
-				04E1C2601406EB7700BA2B97 /* Sparkle.framework in Frameworks */,
+				04C02541140A610B00656AD9 /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,6 +590,7 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_ENABLE_OBJC_GC = required;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;

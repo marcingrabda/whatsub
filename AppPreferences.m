@@ -76,6 +76,11 @@
     return [encodingNumber unsignedIntegerValue];
 }
 
++ (NSNumber*)getDefaultFrameRate
+{
+    return [[NSUserDefaults standardUserDefaults] valueForKey:@"DefaultFrameRate"];
+}
+
 + (BOOL)getWrappedBooleanForKey:(NSString*)key
 {
     NSNumber* wrappedBool = [[NSUserDefaults standardUserDefaults] valueForKey:key];
