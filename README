@@ -4,6 +4,9 @@ WhatSub is a subtitles downloader and converter. It downloads subtitles from the
 
 It is a Mac OS X application written purely in Obj-C.
 
+Version 1.1.2
+* added support for 3gp videos
+
 Version 1.1.1
 * default frame rate has become configurable
 
