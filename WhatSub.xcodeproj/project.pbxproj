@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		04115B390FB6F6C9005E5F74 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04115B380FB6F6C9005E5F74 /* AppController.m */; };
-		0453C5DA13F31C0C00150391 /* TODO in Resources */ = {isa = PBXBuildFile; fileRef = 0453C5D913F31C0C00150391 /* TODO */; };
 		0465473D0FB4319100D9E8FA /* DropFileView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0465473C0FB4319100D9E8FA /* DropFileView.m */; };
 		0471C884124AB368001A567D /* FileHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 0471C883124AB368001A567D /* FileHandler.m */; };
 		0481167C1370B85C00A775F8 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0481167B1370B85C00A775F8 /* libicucore.dylib */; };
@@ -61,7 +60,6 @@
 /* Begin PBXFileReference section */
 		04115B370FB6F6C9005E5F74 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
 		04115B380FB6F6C9005E5F74 /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AppController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		0453C5D913F31C0C00150391 /* TODO */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO; sourceTree = "<group>"; };
 		0465473B0FB4319100D9E8FA /* DropFileView.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; path = DropFileView.h; sourceTree = "<group>"; };
 		0465473C0FB4319100D9E8FA /* DropFileView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropFileView.m; sourceTree = "<group>"; };
 		0471C882124AB368001A567D /* FileHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileHandler.h; sourceTree = "<group>"; };
@@ -288,7 +286,6 @@
 				04A7F9C011216EF4001DAEE8 /* Preferences.xib */,
 				04E1C2681406F29B00BA2B97 /* WhatSub_appcast.xml */,
 				04E1C2621406EF7500BA2B97 /* README */,
-				0453C5D913F31C0C00150391 /* TODO */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -350,6 +347,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0420;
 				ORGANIZATIONNAME = burningtomato.com;
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "WhatSub" */;
@@ -392,7 +390,6 @@
 				04A7F9E011217A02001DAEE8 /* Napiprojekt.png in Resources */,
 				04F72EF8126F759D007C0205 /* Defaults.plist in Resources */,
 				04A7C5F71396F27A009849B2 /* WhatSub.icns in Resources */,
-				0453C5DA13F31C0C00150391 /* TODO in Resources */,
 				04C54B5C13FFF6D0009EE954 /* Auto Update.tiff in Resources */,
 				04E1C2631406EF7500BA2B97 /* README in Resources */,
 				04E1C2691406F29B00BA2B97 /* WhatSub_appcast.xml in Resources */,
@@ -535,7 +532,6 @@
 					"\"$(SRCROOT)/Frameworks\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -580,7 +576,6 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PREBINDING = NO;
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -593,7 +588,6 @@
 				GCC_ENABLE_OBJC_GC = required;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				PREBINDING = NO;
 				SDKROOT = macosx;
 			};
 			name = Release;
