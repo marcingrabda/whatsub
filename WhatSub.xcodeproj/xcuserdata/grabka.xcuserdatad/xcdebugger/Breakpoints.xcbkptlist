@@ -9,25 +9,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "SubtitlesConverter.m"
-         timestampString = "336229273.522484"
+         timestampString = "336230996.67737"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "26"
-         endingLineNumber = "26"
-         landmarkName = "-initWithSupportedMovieExtensions:andDefaultFrameRate:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         isPathRelative = "1"
-         filePath = "SubtitlesConverter.m"
-         timestampString = "336229325.453187"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "139"
-         endingLineNumber = "139"
+         startingLineNumber = "138"
+         endingLineNumber = "138"
          landmarkName = "-processMicroDVD:forMovie:"
          landmarkType = "5">
       </FileBreakpoint>
