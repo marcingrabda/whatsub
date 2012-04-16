@@ -23,6 +23,7 @@
 		<dict>
 			<key>CFBundleTypeExtensions</key>
 			<array>
+				<string>3gp</string>
 				<string>asf</string>
 				<string>avi</string>
 				<string>dat</string>
@@ -66,7 +67,7 @@
 	<key>CFBundleURLTypes</key>
 	<array/>
 	<key>CFBundleVersion</key>
-	<string>1.1.1</string>
+	<string>1.1.2</string>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.utilities</string>
 	<key>NSMainNibFile</key>
