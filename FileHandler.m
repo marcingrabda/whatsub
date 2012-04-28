@@ -3,7 +3,7 @@
 //  WhatSub
 //
 //  Created by Marcin Grabda on 9/22/10.
-//  Copyright 2010 burningtomato.com. All rights reserved.
+//  Copyright 2010 Marcin Grabda. All rights reserved.
 //
 
 #import "FileHandler.h"

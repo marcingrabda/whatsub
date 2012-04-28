@@ -3,7 +3,7 @@
 //  WhatSub
 //
 //  Created by Marcin Grabda on 5/10/09.
-//  Copyright 2010 www.burningtomato.com. All rights reserved.
+//  Copyright 2010 Marcin Grabda. All rights reserved.
 //
 
 #import "AppController.h"

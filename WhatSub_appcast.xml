@@ -2,28 +2,28 @@
 <rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"  xmlns:dc="http://purl.org/dc/elements/1.1/">
     <channel>
         <title></title>
-        <link>https://raw.github.com/burningtomato/whatsub/master/WhatSub_appcast.xml</link>
+        <link>https://raw.github.com/marcingrabda/whatsub/master/WhatSub_appcast.xml</link>
         <description>Most recent changes with links to updates.</description>
         <language>en</language>
         <item>
             <title>Version 1.0</title>
             <pubDate>Wed, 15 Jun 2011 20:00:00 +0000</pubDate>
-            <enclosure url="https://github.com/downloads/burningtomato/whatsub/WhatSub-1.0.zip" sparkle:version="1.0" length="2864" type="application/octet-stream"/>
+            <enclosure url="https://github.com/downloads/marcingrabda/whatsub/WhatSub-1.0.zip" sparkle:version="1.0" length="2864" type="application/octet-stream"/>
         </item>
         <item>
             <title>Version 1.1</title>
             <pubDate>Fri, 26 Aug 2011 00:00:00 +0000</pubDate>
-            <enclosure url="https://github.com/downloads/burningtomato/whatsub/WhatSub-1.1.zip" sparkle:version="1.1" length="3672" type="application/octet-stream"/>
+            <enclosure url="https://github.com/downloads/marcingrabda/whatsub/WhatSub-1.1.zip" sparkle:version="1.1" length="3672" type="application/octet-stream"/>
         </item>
         <item>
             <title>Version 1.1.1</title>
             <pubDate>Sun, 28 Aug 2011 16:00:00 +0000</pubDate>
-            <enclosure url="https://github.com/downloads/burningtomato/whatsub/WhatSub-1.1.1.zip" sparkle:version="1.1.1" length="3680" type="application/octet-stream"/>
+            <enclosure url="https://github.com/downloads/marcingrabda/whatsub/WhatSub-1.1.1.zip" sparkle:version="1.1.1" length="3680" type="application/octet-stream"/>
         </item>
         <item>
             <title>Version 1.1.2</title>
             <pubDate>Mon, 16 Apr 2012 22:00:00 +0000</pubDate>
-            <enclosure url="https://github.com/downloads/burningtomato/whatsub/WhatSub-1.1.2.zip" sparkle:version="1.1.2" length="3680" type="application/octet-stream"/>
+            <enclosure url="https://github.com/downloads/marcingrabda/whatsub/WhatSub-1.1.2.zip" sparkle:version="1.1.2" length="3680" type="application/octet-stream"/>
         </item>
     </channel>
 </rss>

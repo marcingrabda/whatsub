@@ -3,7 +3,7 @@
 //  WhatSub
 //
 //  Created by Marcin Grabda on 1/26/10.
-//  Copyright 2010 www.burningtomato.com. All rights reserved.
+//  Copyright 2010 Marcin Grabda. All rights reserved.
 //
 
 #import "SubtitlesConverter.h"
